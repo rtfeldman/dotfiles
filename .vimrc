@@ -48,6 +48,7 @@ if &t_Co > 2 || has("gui_running")
   set background=light
   colorscheme solarized
   set hlsearch
+  set guifont=Monaco:h18
 endif
 
 " Only do this part when compiled with support for autocommands.
