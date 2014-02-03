@@ -51,7 +51,9 @@ if &t_Co > 2 || has("gui_running")
   set background=light
   colorscheme solarized
 
-  set guifont=Menlo:h18
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h18
+  let g:Powerline_symbols = 'fancy'
+  let g:airline_powerline_fonts = 1
 endif
 
 " Only do this part when compiled with support for autocommands.
