@@ -43,12 +43,15 @@ endif
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
+  set encoding=utf-8
+  set hlsearch
   syntax on
+
   let g:solarized_termcolors=256
   set background=light
   colorscheme solarized
-  set hlsearch
-  set guifont=Monaco:h18
+
+  set guifont=Menlo:h18
 endif
 
 " Only do this part when compiled with support for autocommands.
