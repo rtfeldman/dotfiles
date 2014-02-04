@@ -57,7 +57,7 @@ if has('mouse')
 endif
 
 " Ignores for Ctrl-P
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tmp|public/assets'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp\|public/assets'
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
