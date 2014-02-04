@@ -24,6 +24,12 @@ set backupdir=~/.vim/tmp
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" Smart indentation with tabs being 2 spaces
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
