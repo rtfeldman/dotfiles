@@ -18,8 +18,9 @@ call pathogen#infect()
 " vim-bundler - https://github.com/tpope/vim-bundler
 " vim-multiple-cursors - https://github.com/terryma/vim-multiple-cursor
 
-" put backups here
+" don't clutter up the current directory with backups and swap files.
 set backupdir=~/.vim/tmp
+set directory=~/.vim/tmp
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
