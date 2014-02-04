@@ -70,7 +70,16 @@ if &t_Co > 2 || has("gui_running")
   set background=light
   colorscheme solarized
 
-  set guifont=Source\ Code\ Pro\ for\ Powerline:h18
+  if has("gui_macvim")
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h18
+  else
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ 14
+  endif
+
+  " Remove the menus and toolbar
+  set guioptions-=T
+  set guioptions-=m
+
   let g:Powerline_symbols = 'fancy'
   let g:airline_powerline_fonts = 1
 endif
