@@ -32,6 +32,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Line numbers!
+set number
+
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
