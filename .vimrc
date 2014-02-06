@@ -82,6 +82,11 @@ if &t_Co > 2 || has("gui_running")
 
   let g:Powerline_symbols = 'fancy'
   let g:airline_powerline_fonts = 1
+
+  " Make Ctrl-S work in Insert mode
+  noremap <silent> <C-S>          :update<CR>
+  vnoremap <silent> <C-S>         <C-C>:update<CR>
+  inoremap <silent> <C-S>         <C-O>:update<CR>
 endif
 
 " Only do this part when compiled with support for autocommands.
