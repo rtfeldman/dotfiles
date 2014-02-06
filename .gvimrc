@@ -1,4 +1,4 @@
-# Use Cmd-T (Mac) and Ctrl-T (other) to open CtrlP
+" Use Cmd-T (Mac) and Ctrl-T (other) to open CtrlP
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
   map <D-t> :CtrlP<CR>
