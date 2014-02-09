@@ -18,6 +18,8 @@ call pathogen#infect()
 " vim-bundler - https://github.com/tpope/vim-bundler
 " vim-multiple-cursors - https://github.com/terryma/vim-multiple-cursor
 " vim-coffee-script - https://github.com/kchmck/vim-coffee-script
+" paredit.vim - https://github.com/vim-scripts/paredit.vim
+" VimClojure - https://github.com/vim-scripts/VimClojure
 
 " don't clutter up the current directory with backups and swap files.
 set backupdir=~/.vim/tmp
