@@ -9,7 +9,6 @@ set nocompatible
 
 call pathogen#infect()
 " current plugins:
-" vim-trailing-whitespace - https://github.com/bronson/vim-trailing-whitespace
 " ctrlp.vim - https://github.com/kien/ctrlp.vim
 " vim-airline - https://github.com/bling/vim-airline
 " vim-colors-solarized - https://github.com/altercation/vim-colors-solarized
