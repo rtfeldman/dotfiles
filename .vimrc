@@ -35,13 +35,6 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-" Copy into system clipboard
-nnoremap y "+y
-vnoremap y "+y
-
-" Paste from system clipboard
-set clipboard=unnamedplus
-
 " Press Space to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
