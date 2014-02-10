@@ -71,12 +71,13 @@ endif
 " Ignores for Ctrl-P
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp\|public/assets'
 
+syntax on
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   set encoding=utf-8
   set hlsearch
-  syntax on
 
   let g:solarized_termcolors=256
   set background=light
