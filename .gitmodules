@@ -1,0 +1,24 @@
+[submodule "vim-bundles/ctrlp.vim"]
+	path = vim-bundles/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
+[submodule "vim-bundles/vim-airline"]
+	path = vim-bundles/vim-airline
+	url = git@github.com:bling/vim-airline.git
+[submodule "vim-bundles/vim-colors-solarized"]
+	path = vim-bundles/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "vim-bundles/vim-fugitive"]
+	path = vim-bundles/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "vim-bundles/vim-rails"]
+	path = vim-bundles/vim-rails
+	url = git@github.com:tpope/vim-rails.git
+[submodule "vim-bundles/vim-bundler"]
+	path = vim-bundles/vim-bundler
+	url = git@github.com:tpope/vim-bundler.git
+[submodule "vim-bundles/vim-coffee-script"]
+	path = vim-bundles/vim-coffee-script
+	url = git@github.com:kchmck/vim-coffee-script.git
+[submodule "vim-bundles/VimClojure"]
+	path = vim-bundles/VimClojure
+	url = git@github.com:francoisdevlin/VimClojure.git
