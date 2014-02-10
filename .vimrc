@@ -8,17 +8,6 @@ endif
 set nocompatible
 
 call pathogen#infect()
-" current plugins:
-" ctrlp.vim - https://github.com/kien/ctrlp.vim
-" vim-airline - https://github.com/bling/vim-airline
-" vim-colors-solarized - https://github.com/altercation/vim-colors-solarized
-" vim-fugitive - https://github.com/tpope/vim-fugitive
-" vim-rails - https://github.com/tpope/vim-rails
-" vim-bundler - https://github.com/tpope/vim-bundler
-" vim-multiple-cursors - https://github.com/terryma/vim-multiple-cursor
-" vim-coffee-script - https://github.com/kchmck/vim-coffee-script
-" paredit.vim - https://github.com/vim-scripts/paredit.vim
-" VimClojure - https://github.com/francoisdevlin/VimClojure (branch w/ cljs)
 
 " don't clutter up the current directory with backups and swap files.
 set backupdir=~/.vim/tmp
