@@ -34,3 +34,6 @@
 [submodule "vim-bundles/vim-speeddatting"]
 	path = vim-bundles/vim-speeddatting
 	url = git@github.com:tpope/vim-speeddating.git
+[submodule "vim-bundles/tagbar"]
+	path = vim-bundles/tagbar
+	url = git@github.com:majutsushi/tagbar.git
