@@ -22,3 +22,6 @@
 [submodule "vim-bundles/VimClojure"]
 	path = vim-bundles/VimClojure
 	url = git@github.com:francoisdevlin/VimClojure.git
+[submodule "vim-bundles/vim-repeat"]
+	path = vim-bundles/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
