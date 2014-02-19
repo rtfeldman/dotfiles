@@ -157,3 +157,7 @@ if executable('coffeetags')
         \ }
         \ }
 endif
+
+" Bring up the Tagbar - http://majutsushi.github.io/tagbar/
+nmap <F6> :TagbarToggle<CR>
+
