@@ -25,3 +25,6 @@
 [submodule "vim-bundles/vim-repeat"]
 	path = vim-bundles/vim-repeat
 	url = git@github.com:tpope/vim-repeat.git
+[submodule "vim-bundles/utl.vim"]
+	path = vim-bundles/utl.vim
+	url = git@github.com:vim-scripts/utl.vim.git
