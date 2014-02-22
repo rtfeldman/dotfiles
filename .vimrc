@@ -1,16 +1,3 @@
-" Installation instructions:
-"
-" 1.  git clone git@github.com:rtfeldman/dotfiles.git
-" 2.  cd dotfiles
-" 3.  git submodule init
-" 4.  git submodule update
-" 5.  ln -s path/to/dotfiles/.vimrc ~/.vimrc
-" 6.  ln -s path/to/dotfiles/.gvimrc ~/.gvimrc
-" 7.  ln -s path/to/dotfiles/vim-bundles ~/.vim/bundle
-" 8.  brew install ctags
-" 9.  gem install CoffeeTags
-" 10. start vim!
-
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
