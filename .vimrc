@@ -148,3 +148,16 @@ endif
 " Bring up the Tagbar - http://majutsushi.github.io/tagbar/
 nmap <F6> :TagbarToggle<CR>
 
+" mkdir -p on save when editing a file in a directory that doesn't exist yet
+function s:MkNonExDir(file, buf)
+  if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+    let dir=fnamemodify(a:file, ':h')
+    if !isdirectory(dir)
+      call mkdir(dir, 'p')
+    endif
+  endif
+endfunction
+augroup BWCCreateDir
+  autocmd!
+  autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
