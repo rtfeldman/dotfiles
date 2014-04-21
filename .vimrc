@@ -113,6 +113,8 @@ if has("autocmd")
 
   augroup END
 
+  " .hamlc syntax highlighting
+  au BufRead,BufNewFile *.hamlc set ft=haml
 else
 
   set autoindent		" always set autoindenting on
