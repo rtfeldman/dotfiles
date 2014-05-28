@@ -11,6 +11,7 @@ Configuration files I use.
 4. `git clone git@github.com:rtfeldman/dotfiles.git`
 5. `cd dotfiles`
 6. `git submodule init && git submodule update`
+7. `ln -s path/to/dotfiles/.inputrc ~/.inputrc`
 7. `ln -s path/to/dotfiles/.vimrc ~/.vimrc`
 8. `ln -s path/to/dotfiles/.gvimrc ~/.gvimrc`
 9. `ln -s path/to/dotfiles/vim-bundles ~/.vim/bundle`
