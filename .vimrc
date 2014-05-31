@@ -168,3 +168,5 @@ augroup END
 let g:syntastic_haskell_checkers = ['hdevtools']
 let g:syntastic_coffeescript_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri']
+
+autocmd BufRead,BufNewFile *.purs setlocal filetype=haskell
