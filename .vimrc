@@ -159,7 +159,12 @@ function s:MkNonExDir(file, buf)
     endif
   endif
 endfunction
+
 augroup BWCCreateDir
   autocmd!
   autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
+
+let g:syntastic_haskell_checkers = ['hdevtools']
+let g:syntastic_coffeescript_checkers = ['coffee']
+let g:syntastic_ruby_checkers = ['mri']
