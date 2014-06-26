@@ -58,3 +58,6 @@
 [submodule "vim-bundles/vim-endwise"]
 	path = vim-bundles/vim-endwise
 	url = git://github.com/tpope/vim-endwise.git
+[submodule "vim-bundles/delimitMate"]
+	path = vim-bundles/delimitMate
+	url = git@github.com:Raimondi/delimitMate.git
