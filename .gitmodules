@@ -73,3 +73,6 @@
 [submodule "vim-stylus"]
 	path = vim-stylus
 	url = git@github.com:wavded/vim-stylus.git
+[submodule "vim-bundles/vim-indexed-search"]
+	path = vim-bundles/vim-indexed-search
+	url = git@github.com:henrik/vim-indexed-search.git
