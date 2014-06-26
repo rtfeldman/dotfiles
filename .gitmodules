@@ -64,3 +64,6 @@
 [submodule "vim-bundles/vim-less"]
 	path = vim-bundles/vim-less
 	url = git@github.com:groenewege/vim-less.git
+[submodule "vim-bundles/vim-indent-guides"]
+	path = vim-bundles/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
