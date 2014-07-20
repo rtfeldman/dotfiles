@@ -46,3 +46,33 @@
 [submodule "vim-bundles/vim-indent-object"]
 	path = vim-bundles/vim-indent-object
 	url = git@github.com:michaeljsmith/vim-indent-object.git
+[submodule "vim-bundles/supertab"]
+	path = vim-bundles/supertab
+	url = git@github.com:ervandew/supertab.git
+[submodule "vim-bundles/vim-surround"]
+	path = vim-bundles/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim-bundles/nerdcommenter"]
+	path = vim-bundles/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git
+[submodule "vim-bundles/vim-endwise"]
+	path = vim-bundles/vim-endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "vim-bundles/delimitMate"]
+	path = vim-bundles/delimitMate
+	url = git@github.com:Raimondi/delimitMate.git
+[submodule "vim-bundles/vim-less"]
+	path = vim-bundles/vim-less
+	url = git@github.com:groenewege/vim-less.git
+[submodule "vim-bundles/vim-indent-guides"]
+	path = vim-bundles/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "vim-bundles/Align"]
+	path = vim-bundles/Align
+	url = git@github.com:vim-scripts/Align.git
+[submodule "vim-bundles/vim-indexed-search"]
+	path = vim-bundles/vim-indexed-search
+	url = git@github.com:henrik/vim-indexed-search.git
+[submodule "vim-bundles/vim-stylus"]
+	path = vim-bundles/vim-stylus
+	url = https://github.com/wavded/vim-stylus.git
