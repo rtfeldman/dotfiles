@@ -17,5 +17,7 @@ Configuration files I use.
 9. `ln -s path/to/dotfiles/vim-bundles ~/.vim/bundle`
 10. `brew install ctags`
 11. `gem install CoffeeTags`
-12. start vim!
+12. `cd vim-bundles/command-t`
+13. `rake make`
+14. start vim!
 
