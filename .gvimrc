@@ -5,10 +5,6 @@ if has("gui_macvim")
   " Open CommandT when you press Cmd+T
   map <D-t> :CommandT<CR>
 
-  " Have CommandT open files in a new tab by default
-  let g:CommandTAcceptSelectionMap = '<C-t>'
-  let g:CommandTAcceptSelectionTabMap = '<CR>'
-
   " Use system clipboard (MacVim)
   set clipboard=unnamed
 else
