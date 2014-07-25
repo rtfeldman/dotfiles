@@ -73,9 +73,9 @@
 [submodule "vim-bundles/vim-stylus"]
 	path = vim-bundles/vim-stylus
 	url = git@github.com:wavded/vim-stylus.git
-[submodule "vim-bundles/command-t"]
-	path = vim-bundles/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "vim-bundles/purescript-vim"]
 	path = vim-bundles/purescript-vim
 	url = https://github.com/raichoo/purescript-vim.git
+[submodule "vim-bundles/command-t"]
+	path = vim-bundles/command-t
+	url = git@github.com:rtfeldman/Command-T.git
