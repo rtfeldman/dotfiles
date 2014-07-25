@@ -56,9 +56,13 @@ if has('mouse')
   set mouse=a
 endif
 
-" Ignores for Command-T
-let g:CommandTWildIgnore = ',node_modules,DS_Store,git,tmp,public/assets'
+" Wild ignores
+set wildignore+=*.o,*.obj,.git,node_modules,tmp
+
+" Specific ignores for Command-T
+let g:CommandTWildIgnore = ',public/assets'
 let g:CommandTFileScanner = 'find'
+
 
 syntax on
 
