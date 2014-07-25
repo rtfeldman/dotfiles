@@ -51,8 +51,9 @@ if has('mouse')
   set mouse=a
 endif
 
-" Ignores for Ctrl-P
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp\|public/assets'
+" Ignores for Command-T
+let g:CommandTWildIgnore = ',node_modules,DS_Store,git,tmp,public/assets'
+let g:CommandTFileScanner = 'find'
 
 syntax on
 
