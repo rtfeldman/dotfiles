@@ -174,7 +174,3 @@ augroup END
 let g:syntastic_haskell_checkers = ['hdevtools']
 let g:syntastic_coffeescript_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri']
-
-" use Haskell syntax highlighting for .purs files (until there's a PureScript
-" highlighter)
-autocmd BufRead,BufNewFile *.purs setlocal filetype=haskell
