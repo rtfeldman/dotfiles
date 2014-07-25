@@ -25,6 +25,11 @@ set expandtab
 " Line numbers!
 set number
 
+" ignore case when searching, except when searching for caps, in which case
+" don't ignore case.
+set ignorecase
+set smartcase
+
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
