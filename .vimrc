@@ -57,10 +57,10 @@ if has('mouse')
 endif
 
 " Wild ignores
-set wildignore+=*.o,*.obj,.git,node_modules,tmp
+set wildignore+=*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.gif,*.bmp,*.tif,*.tiff,*.mpg,*.mpeg,*.psd
 
 " Specific ignores for Command-T
-let g:CommandTWildIgnore = ',public/assets'
+let g:CommandTWildIgnore=&wildignore . ",node_modules/**,public/assets,tmp/**"
 let g:CommandTFileScanner = 'find'
 
 
