@@ -75,4 +75,4 @@
 	url = https://github.com/raichoo/purescript-vim.git
 [submodule "vim-bundles/command-t"]
 	path = vim-bundles/command-t
-	url = git@github.com:rtfeldman/Command-T.git
+	url = git@github.com:wincent/Command-T.git
