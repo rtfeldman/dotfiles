@@ -21,3 +21,10 @@ Configuration files I use.
 13. `rake make`
 14. start vim!
 
+## Fresh Sublime Text 3 Setup
+
+1. (OS X only) run this in the terminal:
+
+```bash
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+```
