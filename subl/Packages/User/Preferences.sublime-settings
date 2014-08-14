@@ -1,0 +1,32 @@
+{
+	"caret_style": "solid",
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"file_exclude_patterns":
+	[
+		"*.log",
+		"*.hamlc",
+		"*.scssc",
+		"*.sassc",
+		".*"
+	],
+	"folder_exclude_patterns":
+	[
+		"node_modules",
+		"tmp",
+		".*"
+	],
+	"font_size": 18,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"show_full_path": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"vintageous_ignorecase": false,
+	"vintageous_use_sys_clipboard": true
+}
