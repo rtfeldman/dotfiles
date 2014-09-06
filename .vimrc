@@ -60,14 +60,8 @@ endif
 set wildignore+=*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.gif,*.bmp,*.tif,*.tiff,*.mpg,*.mpeg,*.psd
 
 " Specific ignores for Command-T
-let g:CommandTWildIgnore=&wildignore . ",node_modules/**,public/assets,tmp/**"
+let g:CommandTWildIgnore=&wildignore . ",dist/**,node_modules/**,public/assets,tmp/**"
 let g:CommandTFileScanner = 'find'
-
-" Rebuild CommandT's index whenever a file is written.
-augroup CommandTExtension
-  autocmd!
-  autocmd BufWritePost * CommandTFlush
-augroup END
 
 syntax on
 
