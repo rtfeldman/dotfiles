@@ -3,6 +3,12 @@ dotfiles
 
 Configuration files I use.
 
+## Fresh Emacs Setup
+
+1. Install Emacs
+2. `ln -s ~/dotfiles/init.el ~/.emacs.d/init.el`
+3. `ln -s ~/dotfiles/emacs-submodules/ ~/.emacs.d/submodules`
+
 ## Fresh Vim Setup
 
 1. Install Vim
