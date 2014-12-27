@@ -6,17 +6,24 @@
 		"*.log",
 		"*.scssc",
 		"*.sassc",
+		"*.elmi",
+		"*.elmo",
 		".*"
 	],
 	"folder_exclude_patterns":
 	[
 		"node_modules",
+		"elm_dependencies",
+		"bower_components",
+		"html-report",
+		"lcov-report",
 		"tmp",
 		"dist",
 		"vendor",
+		"dist",
 		".*"
 	],
-	"font_size": 18,
+	"font_size": 21,
 	"ignored_packages":
 	[
 		"Vintage"

@@ -3,14 +3,17 @@
 	[
 		"AdvancedNewFile",
 		"Alignment",
+		"AlignTab",
 		"Better CoffeeScript",
 		"CoffeeScriptHaml",
+		"Elm Language Support",
 		"Git",
 		"MacTerminal",
 		"Markdown Preview",
+		"PureScript",
 		"Ruby Markers",
 		"SCSS",
-		"SublimeREPL",
+		"SmartMarkdown",
 		"Theme - Sodarized",
 		"VAlign",
 		"Vintageous"
