@@ -29,12 +29,20 @@ Configuration files I use.
 
 ## Fresh Sublime Text 3 Setup
 
-1. Replace `path/to/sublime/Packages/User/Package\ Control.sublime-settings` with `ln -s ~/dotfiles/subl/Packages/User/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings`
-2. Replace `path/to/sublime/Packages/User/Default\ \(OSX\).sublime-keymap` with `ln -s ~/dotfiles/subl/Packages/User/Default\ \(OSX\).sublime-keymap ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap`
-3. Replace `path/to/sublime/Packages/User/Preferences.sublime-settings` with `ln -s ~/dotfiles/subl/Packages/User/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings`
-4. Replace `path/to/sublime/Installed\ Packages` with a symlink to `path/to/dotfiles/subl/Installed\ Packages`
-1. (OS X only) run this in the terminal:
-
 ```bash
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+ln -s ~/dotfiles/subl/Installed\ Packages/ ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
+ln -s ~/dotfiles/subl/Packages/User/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+ln -s ~/dotfiles/subl/Packages/User/Default\ \(OSX\).sublime-keymap ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap
+ln -s ~/dotfiles/subl/Packages/User/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```
+
+## OS X Config
+
+Create `~/.inputrc` with contents:
+
+```bash
+set editing-mode vi
+set keymap vi-command
 ```
