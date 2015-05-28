@@ -1,4 +1,7 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"AdvancedNewFile",
@@ -10,6 +13,7 @@
 		"Git",
 		"MacTerminal",
 		"Markdown Preview",
+		"Package Control",
 		"PureScript",
 		"Ruby Markers",
 		"SCSS",

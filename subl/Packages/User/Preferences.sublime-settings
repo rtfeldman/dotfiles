@@ -21,6 +21,7 @@
 		"dist",
 		"vendor",
 		"dist",
+		"elm-stuff",
 		".*"
 	],
 	"font_size": 21,
