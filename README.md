@@ -40,9 +40,7 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 
 ## OS X Config
 
-Create `~/.inputrc` with contents:
-
 ```bash
-set editing-mode vi
-set keymap vi-command
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.gitrc ~/.vimrc
 ```
