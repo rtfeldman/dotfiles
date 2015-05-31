@@ -44,3 +44,17 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.gitrc ~/.vimrc
 ```
+
+Install git and bash completion:
+
+```bash
+brew install git bash-completion
+```
+
+...then add the following to `~/.bash-profile` to activate bash completion:
+
+```bash
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+```
