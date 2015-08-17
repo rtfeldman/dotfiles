@@ -1,8 +1,11 @@
 {
 	"caret_style": "solid",
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"detect_indentation": true,
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
+		"screenshot*.html",
 		"*.log",
 		"*.scssc",
 		"*.sassc",
@@ -10,6 +13,7 @@
 		"*.elmo",
 		".*"
 	],
+	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
 		"node_modules",
@@ -22,6 +26,7 @@
 		"dist",
 		"vendor",
 		"dist",
+		"log",
 		"elm-stuff",
 		".*"
 	],
@@ -35,8 +40,9 @@
 		80
 	],
 	"show_full_path": true,
-	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": true,
 	"vintageous_ignorecase": false,
 	"vintageous_use_sys_clipboard": true
 }

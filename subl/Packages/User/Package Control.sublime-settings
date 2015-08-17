@@ -9,8 +9,9 @@
 		"AlignTab",
 		"Better CoffeeScript",
 		"CoffeeScriptHaml",
-		"Elm Language Support",
+		"elm-sublime",
 		"Git",
+		"Highlight Build Errors",
 		"MacTerminal",
 		"Markdown Preview",
 		"Package Control",
@@ -20,7 +21,12 @@
 		"SmartMarkdown",
 		"SublimeREPL",
 		"Theme - Sodarized",
+		"Trailing Punctuation",
 		"VAlign",
 		"Vintageous"
+	],
+	"repositories":
+	[
+		"https://github.com/dnalot/elm-sublime"
 	]
 }
