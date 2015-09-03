@@ -1,6 +1,6 @@
 {
 	"caret_style": "solid",
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"detect_indentation": true,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
@@ -30,7 +30,7 @@
 		"elm-stuff",
 		".*"
 	],
-	"font_size": 22,
+	"font_size": 19,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -40,6 +40,7 @@
 		80
 	],
 	"show_full_path": true,
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
