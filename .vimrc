@@ -72,7 +72,7 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 
   let g:solarized_termcolors=256
-  set background=light
+  set background=dark
   colorscheme solarized
 
   if has("gui_macvim")
