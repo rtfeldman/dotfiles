@@ -2,10 +2,12 @@
 	"caret_style": "solid",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"detect_indentation": true,
+	"save_on_focus_lost": true,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
 		"screenshot*.html",
+		"*.min.js",
 		"*.log",
 		"*.scssc",
 		"*.sassc",
@@ -20,6 +22,7 @@
 		"elm_dependencies",
 		"elm-stuff",
 		"bower_components",
+		"public/assets",
 		"html-report",
 		"lcov-report",
 		"tmp",
@@ -30,7 +33,7 @@
 		"elm-stuff",
 		".*"
 	],
-	"font_size": 19,
+	"font_size": 20,
 	"ignored_packages":
 	[
 		"Vintage"
