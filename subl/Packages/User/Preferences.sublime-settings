@@ -2,7 +2,6 @@
 	"caret_style": "solid",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"detect_indentation": true,
-	"save_on_focus_lost": true,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -19,8 +18,6 @@
 	"folder_exclude_patterns":
 	[
 		"node_modules",
-		"elm_dependencies",
-		"elm-stuff",
 		"bower_components",
 		"public/assets",
 		"html-report",
@@ -30,10 +27,9 @@
 		"vendor",
 		"dist",
 		"log",
-		"elm-stuff",
-		".*"
+		"elm-stuff"
 	],
-	"font_size": 20,
+	"font_size": 22,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -42,6 +38,7 @@
 	[
 		80
 	],
+	"save_on_focus_lost": true,
 	"show_full_path": true,
 	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
