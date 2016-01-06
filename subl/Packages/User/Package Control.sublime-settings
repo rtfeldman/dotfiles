@@ -36,5 +36,6 @@
 	],
 	"repositories":
 	[
+		"https://raw.githubusercontent.com/deadfoxygrandpa/Elm.tmLanguage/beta/beta-repository.json"
 	]
 }
