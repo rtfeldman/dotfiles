@@ -40,7 +40,6 @@
 	],
 	"save_on_focus_lost": false,
 	"show_full_path": true,
-	"show_panel_on_build": false,
 	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
