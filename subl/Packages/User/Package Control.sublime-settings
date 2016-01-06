@@ -11,6 +11,7 @@
 		"AlignTab",
 		"Better CoffeeScript",
 		"CoffeeScriptHaml",
+		"Elm Language Support",
 		"Git",
 		"Highlight Build Errors",
 		"Markdown Preview",
@@ -26,8 +27,8 @@
 		"Schemr",
 		"SCSS",
 		"SmartMarkdown",
-		"sublime-langauge-elm",
 		"SublimeREPL",
+		"Surround",
 		"Theme - Sodarized",
 		"Trailing Punctuation",
 		"VAlign",
@@ -35,7 +36,5 @@
 	],
 	"repositories":
 	[
-		"https://github.com/dnalot/elm-sublime",
-		"https://github.com/dnalot/sublime-langauge-elm"
 	]
 }

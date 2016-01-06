@@ -11,13 +11,13 @@
 		"*.scssc",
 		"*.sassc",
 		"*.elmi",
-		"*.elmo",
-		".*"
+		"*.elmo"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
 		"node_modules",
+		".*",
 		"bower_components",
 		"public/assets",
 		"html-report",
@@ -29,7 +29,7 @@
 		"log",
 		"elm-stuff"
 	],
-	"font_size": 22,
+	"font_size": 23,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -38,8 +38,9 @@
 	[
 		80
 	],
-	"save_on_focus_lost": true,
+	"save_on_focus_lost": false,
 	"show_full_path": true,
+	"show_panel_on_build": false,
 	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
