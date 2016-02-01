@@ -29,6 +29,10 @@ let g:bufferline_echo = 0
     \ let &statusline='%{bufferline#refresh_status()}'
       \ .bufferline#get_status_string()
 
+" Cycle through buffers with tab and shif-tab in normal mode
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+
 " Use system clipboard
 set clipboard=unnamed
 
