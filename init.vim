@@ -4,8 +4,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'elmcast/elm-vim', { 'for': 'elm' }
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  Plug 'ap/vim-buftabline'
 call plug#end()
 
 " change the mapleader from \ to ,
@@ -47,33 +46,14 @@ syntax enable
 set background=dark
 colorscheme hybrid
 
-" airline
-let g:airline_theme = "hybrid"
-let g:airline_powerline_fonts = 1
-
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-" If two buffers have the same filename, show more path to disambiguate
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-
-" Don't collapse long buffer names.
-let g:airline#extensions#tabline#fnamecollapse=0
-
-" Truncate long buffer names to 16 characters
-let g:airline#extensions#tabline#fnametruncate=16
-
 " Don't show the status line
 set laststatus=0
 
-let g:airline_extensions = ['tabline']
+" show in buftabline when a buffer is modified
+let g:buftabline_indicators = 1
 
-" Only show the tabline if there are at least 2 buffers open
-let g:airline#extensions#tabline#buffer_min_count = 2
-
+" only show buftabline when there are at least 2 buffers open
+let g:buftabline_show = 1
 
 " elm-vim
 let g:elm_format_autosave = 1
