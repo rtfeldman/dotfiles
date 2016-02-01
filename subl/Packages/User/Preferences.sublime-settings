@@ -2,7 +2,7 @@
 	"auto_match_enabled": false,
 	"caret_style": "solid",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-	"detect_indentation": true,
+	"detect_indentation": false,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -30,7 +30,7 @@
 		"log",
 		"elm-stuff"
 	],
-	"font_size": 23,
+	"font_size": 22,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -41,6 +41,7 @@
 	],
 	"save_on_focus_lost": false,
 	"show_full_path": true,
+	"tab_size": 2,
 	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,

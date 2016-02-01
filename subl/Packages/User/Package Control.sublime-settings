@@ -5,7 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"AAAPackageDev",
 		"AdvancedNewFile",
 		"Alignment",
 		"AlignTab",
@@ -13,12 +12,12 @@
 		"CoffeeScriptHaml",
 		"Elm Language Support",
 		"Git",
-		"Highlight Build Errors",
 		"Markdown Preview",
 		"Material Theme",
 		"Oceanic Color Scheme",
 		"Oceanic Next Color Scheme",
 		"Package Control",
+		"PackageDev",
 		"PackageResourceViewer",
 		"PureScript",
 		"Ruby Markers",
