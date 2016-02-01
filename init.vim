@@ -1,8 +1,10 @@
 call plug#begin('~/.vim/plugged')
   Plug 'w0ng/vim-hybrid'
+  Plug 'tpope/vim-fugitive'
   Plug 'elmcast/elm-vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+  Plug 'bling/vim-bufferline'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -14,8 +16,24 @@ if !has('gui_running')
   endif
 endif
 
+" Have vim-bufferline show buffer numbers
+let g:bufferline_show_bufnr = 1
+let g:bufferline_active_buffer_left = '['
+let g:bufferline_active_buffer_right = ']'
+let g:bufferline_modified = '+'
+let g:bufferline_inactive_highlight = 'StatusLineNC'
+let g:bufferline_active_highlight = 'StatusLine'
+let g:bufferline_solo_highlight = 1
+let g:bufferline_echo = 0
+  autocmd VimEnter *
+    \ let &statusline='%{bufferline#refresh_status()}'
+      \ .bufferline#get_status_string()
+
 " Use system clipboard
 set clipboard=unnamed
+
+" Do diffs with a vertical side-by-side like GitHub
+set diffopt+=vertical
 
 " FZF
 let $FZF_DEFAULT_COMMAND = 'ag --ignore "vendor/" --ignore "*.png" --ignore "*.jpg" --ignore "*.jpeg" --ignore "*.gif" --ignore "*.bmp" --ignore "*.tif" --ignore "*.tiff" --ignore "*.mpg" --ignore "*.mpeg" --ignore "*.psd" -l -g ""'
@@ -38,6 +56,11 @@ colorscheme hybrid
 " airline
 let g:airline_theme = "hybrid"
 let g:airline_powerline_fonts = 1
+
+" Enable the list of buffers
+"let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+"let g:airline#extensions#tabline#fnamemod = ':t'
 
 " elm-vim
 let g:elm_format_autosave = 1
@@ -198,3 +221,39 @@ let g:syntastic_haskell_checkers = ['hdevtools']
 let g:syntastic_coffeescript_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri']
 
+" Custom airline from https://github.com/blaenk/dots/blob/275b3b40fa0c57f1b48b5ba59b9ecbc00cddf866/vim/vimrc.ln#L80-L202
+
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+
+function! AirLineBlaenk()
+  function! Modified()
+    return &modified ? " +" : ''
+  endfunction
+
+  call airline#parts#define_raw('filename', '%<%f')
+  call airline#parts#define_function('modified', 'Modified')
+
+  let g:airline_section_a = airline#section#create_left(['filename'])
+  let g:airline_section_b = airline#section#create_left([''])
+  let g:airline_section_x = airline#section#create_right([''])
+  let g:airline_section_y = airline#section#create_right([''])
+  let g:airline_section_z = airline#section#create(['branch'])
+endfunction
+
+autocmd Vimenter * call AirLineBlaenk()
+set laststatus=0
+
+let g:airline_mode_map = {
+  \ '__' : '-',
+  \ 'n'  : 'N',
+  \ 'i'  : 'I',
+  \ 'R'  : 'R',
+  \ 'v'  : 'V',
+  \ 'V'  : 'V-L',
+  \ 'c'  : 'C',
+  \ '' : 'V-B',
+  \ 's'  : 'S',
+  \ 'S'  : 'S-L',
+  \ '' : 'S-B',
+  \ }
