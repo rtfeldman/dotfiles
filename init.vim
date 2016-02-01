@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'ap/vim-buftabline'
+  Plug 'rking/ag.vim'
 call plug#end()
 
 " change the mapleader from \ to ,
@@ -22,6 +23,14 @@ endif
 :nnoremap <silent> <S-Tab> :bprevious<CR>
 :nnoremap <silent> <leader>w :bdelete<CR>
 
+let ag_ignores = '--ignore "vendor/" --ignore "*.png" --ignore "*.jpg" --ignore "*.jpeg" --ignore "*.gif" --ignore "*.bmp" --ignore "*.tif" --ignore "*.tiff" --ignore "*.mpg" --ignore "*.mpeg" --ignore "*.cur" --ignore "*.ico" --ignore "*.psd"'
+
+" Have ag.vim always start from project root instead of cwd
+let g:ag_working_path_mode="r"
+
+" Have ag.vim respect .gitignore
+let g:ag_prg="ag " . ag_ignores . " -l -g "" --vimgrep"
+
 " Use system clipboard
 set clipboard=unnamed
 
@@ -29,7 +38,7 @@ set clipboard=unnamed
 set diffopt+=vertical
 
 " FZF
-let $FZF_DEFAULT_COMMAND = 'ag --ignore "vendor/" --ignore "*.png" --ignore "*.jpg" --ignore "*.jpeg" --ignore "*.gif" --ignore "*.bmp" --ignore "*.tif" --ignore "*.tiff" --ignore "*.mpg" --ignore "*.mpeg" --ignore "*.psd" -l -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag ' . ag_ignores . ' -l -g ""'
 
 " Incorporate fzf into Neovim's Statusline
 function! s:fzf_statusline()
