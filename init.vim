@@ -16,14 +16,18 @@ if !has('gui_running')
   endif
 endif
 
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-" Show just the filename
-"let g:airline#extensions#tabline#fnamemod = ':t'
+" Have vim-bufferline show buffer numbers
+let g:bufferline_show_bufnr = 1
+let g:bufferline_active_buffer_left = '['
+let g:bufferline_active_buffer_right = ']'
+let g:bufferline_modified = '+'
+let g:bufferline_inactive_highlight = 'StatusLineNC'
+let g:bufferline_active_highlight = 'StatusLine'
+let g:bufferline_solo_highlight = 1
+let g:bufferline_echo = 0
+  autocmd VimEnter *
+    \ let &statusline='%{bufferline#refresh_status()}'
+      \ .bufferline#get_status_string()
 
 " Cycle through buffers with tab and shif-tab in normal mode
 :nnoremap <Tab> :bnext<CR>
@@ -56,6 +60,11 @@ colorscheme hybrid
 " airline
 let g:airline_theme = "hybrid"
 let g:airline_powerline_fonts = 1
+
+" Enable the list of buffers
+"let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+"let g:airline#extensions#tabline#fnamemod = ':t'
 
 " elm-vim
 let g:elm_format_autosave = 1
@@ -215,3 +224,39 @@ augroup END
 let g:syntastic_haskell_checkers = ['hdevtools']
 let g:syntastic_coffeescript_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri']
+
+" Custom airline from https://github.com/blaenk/dots/blob/275b3b40fa0c57f1b48b5ba59b9ecbc00cddf866/vim/vimrc.ln#L80-L202
+
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+
+function! AirLineBlaenk()
+  function! Modified()
+    return &modified ? " +" : ''
+  endfunction
+
+  call airline#parts#define_raw('filename', '%<%f')
+  call airline#parts#define_function('modified', 'Modified')
+
+  let g:airline_section_a = airline#section#create_left(['filename'])
+  let g:airline_section_b = airline#section#create_left([''])
+  let g:airline_section_x = airline#section#create_right([''])
+  let g:airline_section_y = airline#section#create_right([''])
+  let g:airline_section_z = airline#section#create(['branch'])
+endfunction
+
+autocmd Vimenter * call AirLineBlaenk()
+
+let g:airline_mode_map = {
+  \ '__' : '-',
+  \ 'n'  : 'N',
+  \ 'i'  : 'I',
+  \ 'R'  : 'R',
+  \ 'v'  : 'V',
+  \ 'V'  : 'V-L',
+  \ 'c'  : 'C',
+  \ '' : 'V-B',
+  \ 's'  : 'S',
+  \ 'S'  : 'S-L',
+  \ '' : 'S-B',
+  \ }
