@@ -4,10 +4,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'elmcast/elm-vim', { 'for': 'elm' }
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'bling/vim-bufferline'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+" change the mapleader from \ to ,
+let g:mapleader=","
 
 let g:base16_shell_path='/Users/rtfeldman/code/base16-builder/output/shell/'
 if !has('gui_running')
@@ -17,8 +19,9 @@ if !has('gui_running')
 endif
 
 " Cycle through buffers with tab and shif-tab in normal mode
-:nnoremap <Tab> :bnext<CR>
-:nnoremap <S-Tab> :bprevious<CR>
+:nnoremap <silent> <Tab> :bnext<CR>
+:nnoremap <silent> <S-Tab> :bprevious<CR>
+:nnoremap <silent> <leader>w :bdelete<CR>
 
 " Use system clipboard
 set clipboard=unnamed
@@ -49,9 +52,28 @@ let g:airline_theme = "hybrid"
 let g:airline_powerline_fonts = 1
 
 " Enable the list of buffers
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
 " Show just the filename
-"let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" If two buffers have the same filename, show more path to disambiguate
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+" Don't collapse long buffer names.
+let g:airline#extensions#tabline#fnamecollapse=0
+
+" Truncate long buffer names to 16 characters
+let g:airline#extensions#tabline#fnametruncate=16
+
+" Don't show the status line
+set laststatus=0
+
+let g:airline_extensions = ['tabline']
+
+" Only show the tabline if there are at least 2 buffers open
+let g:airline#extensions#tabline#buffer_min_count = 2
+
 
 " elm-vim
 let g:elm_format_autosave = 1
@@ -212,40 +234,3 @@ let g:syntastic_haskell_checkers = ['hdevtools']
 let g:syntastic_coffeescript_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri']
 
-" Custom airline from https://github.com/blaenk/dots/blob/275b3b40fa0c57f1b48b5ba59b9ecbc00cddf866/vim/vimrc.ln#L80-L202
-
-let g:airline#extensions#hunks#enabled = 0
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#bufferline#enabled = 1
-let g:airline_extensions = ['branch', 'bufferline']
-
-function! AirLineBlaenk()
-  function! Modified()
-    return &modified ? " +" : ''
-  endfunction
-
-  call airline#parts#define_raw('filename', '%<%f')
-  call airline#parts#define_function('modified', 'Modified')
-
-  let g:airline_section_a = airline#section#create_left(['filename'])
-  let g:airline_section_b = airline#section#create_left([''])
-  let g:airline_section_x = airline#section#create_right([''])
-  let g:airline_section_y = airline#section#create_right([''])
-  let g:airline_section_z = airline#section#create(['branch'])
-endfunction
-
-autocmd Vimenter * call AirLineBlaenk()
-
-let g:airline_mode_map = {
-  \ '__' : '-',
-  \ 'n'  : 'N',
-  \ 'i'  : 'I',
-  \ 'R'  : 'R',
-  \ 'v'  : 'V',
-  \ 'V'  : 'V-L',
-  \ 'c'  : 'C',
-  \ '' : 'V-B',
-  \ 's'  : 'S',
-  \ 'S'  : 'S-L',
-  \ '' : 'S-B',
-  \ }
