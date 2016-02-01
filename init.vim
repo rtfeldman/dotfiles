@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'ap/vim-buftabline'
   Plug 'rking/ag.vim'
+  Plug 'tomtom/tcomment_vim'
+  Plug 'tpope/vim-surround'
 call plug#end()
 
 " change the mapleader from \ to ,
