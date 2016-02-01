@@ -49,6 +49,9 @@ Install git and bash completion:
 
 ```bash
 brew install git bash-completion
+brew install fzf
+brew install pt
+brew install nvim
 ```
 
 ...then add the following to `~/.bash-profile` to activate bash completion:
@@ -58,3 +61,7 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 ```
+
+Install iTerm2, then add a custom modifier for Cmd+S that has it send
+hex code 0x13 (Ctrl-S, which nvim will then use to Save). Do the same for
+Cmd+O and 0x14 (Ctrl-T).
