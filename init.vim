@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
   Plug 'w0ng/vim-hybrid'
   Plug 'tpope/vim-fugitive'
-  Plug 'elmcast/elm-vim'
+  Plug 'elmcast/elm-vim', { 'for': 'elm' }
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'bling/vim-bufferline'
@@ -15,19 +15,6 @@ if !has('gui_running')
     execute "silent !/bin/sh ".g:base16_shell_path."/base16-materialtheme.".&background.".sh"
   endif
 endif
-
-" Have vim-bufferline show buffer numbers
-let g:bufferline_show_bufnr = 1
-let g:bufferline_active_buffer_left = '['
-let g:bufferline_active_buffer_right = ']'
-let g:bufferline_modified = '+'
-let g:bufferline_inactive_highlight = 'StatusLineNC'
-let g:bufferline_active_highlight = 'StatusLine'
-let g:bufferline_solo_highlight = 1
-let g:bufferline_echo = 0
-  autocmd VimEnter *
-    \ let &statusline='%{bufferline#refresh_status()}'
-      \ .bufferline#get_status_string()
 
 " Cycle through buffers with tab and shif-tab in normal mode
 :nnoremap <Tab> :bnext<CR>
@@ -229,6 +216,8 @@ let g:syntastic_ruby_checkers = ['mri']
 
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline_extensions = ['branch', 'bufferline']
 
 function! AirLineBlaenk()
   function! Modified()
