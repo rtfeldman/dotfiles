@@ -47,13 +47,6 @@ hi default Flashy term=bold ctermbg=darkblue guibg=darkblue
 hi default Cursor ctermbg=darkblue cterm=bold guibg=darkblue
 let g:operator#flashy#flash_time = 250
 
-let g:base16_shell_path='/Users/rtfeldman/code/base16-builder/output/shell/'
-if !has('gui_running')
-  if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-materialtheme.".&background.".sh"
-  endif
-endif
-
 " Cycle through buffers with tab and shif-tab in normal mode
 :nnoremap <silent> <Tab> :bnext!<CR>
 :nnoremap <silent> <S-Tab> :bprevious!<CR>
