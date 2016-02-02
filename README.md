@@ -6,6 +6,7 @@ Configuration files I use.
 ## Fresh Neovim Setup
 
 1. brew install ag neovim/neovim/neovim
+2. Make sure Python 2.7.x is installed, for the YouCompleteMe plugin
 3. Install vim-plug
 4. `git clone git@github.com:rtfeldman/dotfiles.git`
 5. `cd dotfiles`
