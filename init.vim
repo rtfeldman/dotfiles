@@ -65,16 +65,8 @@ let g:ag_prg="ag " . ag_ignores . " --vimgrep"
 " Have FZF use ag, with our ignores, and without searching inside files
 let $FZF_DEFAULT_COMMAND = 'ag ' . ag_ignores . ' -l -g ""'
 
-" Incorporate fzf into Neovim's Statusline
-function! s:fzf_statusline()
-  " Override statusline as you like
-  highlight fzf1 ctermfg=161 ctermbg=251
-  highlight fzf2 ctermfg=23 ctermbg=251
-  highlight fzf3 ctermfg=237 ctermbg=251
-  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
-endfunction
-
-autocmd! User FzfStatusLine call <SID>fzf_statusline()
+" Disable FZF's statusline integration (since we have no statusline)
+let g:fzf_nvim_statusline = 0 " disable statusline overwriting
 
 " Don't show the status line
 set laststatus=0
