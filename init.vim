@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'henrik/vim-indexed-search'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  Plug 'kana/vim-operator-user' " vim-operator-flashy depends on this
+  Plug 'haya14busa/vim-operator-flashy'
 
   " Plugins individual to my setup
   Plug 'w0ng/vim-hybrid'
@@ -34,6 +36,15 @@ set clipboard=unnamed
 
 " Do diffs with a vertical side-by-side like GitHub
 set diffopt+=vertical
+
+" Enable operator-flashy
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
+
+" Flash dark blue on yank
+hi default Flashy term=bold ctermbg=darkblue guibg=darkblue
+hi default Cursor ctermbg=darkblue cterm=bold guibg=darkblue
+let g:operator#flashy#flash_time = 250
 
 let g:base16_shell_path='/Users/rtfeldman/code/base16-builder/output/shell/'
 if !has('gui_running')
