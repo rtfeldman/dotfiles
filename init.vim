@@ -79,6 +79,9 @@ autocmd! User FzfStatusLine call <SID>fzf_statusline()
 " Don't show the status line
 set laststatus=0
 
+" Show separators between buffers in tabline
+let g:buftabline_separators = 1
+
 " show in buftabline when a buffer is modified
 let g:buftabline_indicators = 1
 
