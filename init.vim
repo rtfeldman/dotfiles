@@ -63,6 +63,9 @@ inoremap <C-U> <C-G>u<C-U>
 
 " ------- GENERAL UX -------
 
+" Don't wrap long lines
+set nowrap
+
 " mkdir -p on save when editing a file in a directory that doesn't exist yet
 function s:MkNonExDir(file, buf)
   if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
