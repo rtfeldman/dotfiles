@@ -6,14 +6,15 @@ Configuration files I use.
 ## Fresh Neovim Setup
 
 1. brew install ag neovim/neovim/neovim
-2. Make sure Python 2.7.x is installed, for the YouCompleteMe plugin
-3. Install vim-plug
-4. `git clone git@github.com:rtfeldman/dotfiles.git`
-5. `cd dotfiles`
-6. `ln -fs $(pwd)/init.vim ~/.config/nvim/init.vim`
-7. `brew install ctags`
-8. `gem install CoffeeTags`
-9. start nvim!
+2. Install vim-plug
+3. Make sure Python 2.7.x is installed, for the YouCompleteMe plugin
+4. pip2 install --user neovim
+5. `git clone git@github.com:rtfeldman/dotfiles.git`
+6. `cd dotfiles`
+7. `ln -fs $(pwd)/init.vim ~/.config/nvim/init.vim`
+8. `brew install ctags`
+9. `gem install CoffeeTags`
+10. start nvim!
 
 ## Fresh Sublime Text 3 Setup
 
