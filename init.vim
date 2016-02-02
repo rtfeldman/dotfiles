@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'haya14busa/vim-operator-flashy'
 
   " Plugins individual to my setup
-  Plug 'w0ng/vim-hybrid'
+  Plug 'w0ng/vim-hybrid' " Theme
   Plug 'elmcast/elm-vim', { 'for': 'elm' }
   Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
   Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
