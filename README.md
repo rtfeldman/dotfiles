@@ -3,6 +3,28 @@ dotfiles
 
 Configuration files I use.
 
+## Fresh Neovim Setup
+
+1. brew install ag neovim/neovim/neovim
+3. Install vim-plug
+4. `git clone git@github.com:rtfeldman/dotfiles.git`
+5. `cd dotfiles`
+6. `ln -fs $(pwd)/init.vim ~/.config/nvim/init.vim`
+7. `brew install ctags`
+8. `gem install CoffeeTags`
+9. start nvim!
+
+## Fresh Sublime Text 3 Setup
+
+```bash
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+ln -fs ~/dotfiles/subl/Installed\ Packages/ ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
+ln -fs ~/dotfiles/subl/Packages/User/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+ln -fs ~/dotfiles/subl/Packages/User/Default\ \(OSX\).sublime-keymap ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap
+ln -fs ~/dotfiles/subl/Packages/User/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
+ln -fs /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```
+
 ## Fresh Emacs Setup
 
 1. Install Emacs
@@ -27,17 +49,6 @@ Configuration files I use.
 13. `rake make`
 14. start vim!
 
-## Fresh Sublime Text 3 Setup
-
-```bash
-defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
-ln -fs ~/dotfiles/subl/Installed\ Packages/ ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
-ln -fs ~/dotfiles/subl/Packages/User/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
-ln -fs ~/dotfiles/subl/Packages/User/Default\ \(OSX\).sublime-keymap ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap
-ln -fs ~/dotfiles/subl/Packages/User/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
-ln -fs /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-```
-
 ## OS X Config
 
 ```bash
@@ -50,8 +61,6 @@ Install git and bash completion:
 ```bash
 brew install git bash-completion
 brew install fzf
-brew install ag
-brew install neovim/neovim/neovim
 ```
 
 ...then add the following to `~/.bash-profile` to activate bash completion:
