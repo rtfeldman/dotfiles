@@ -92,7 +92,7 @@ endif
 
 " Works in insert mode, saves and puts back in insert mode
 :imap <C-s> <Esc>:w<kEnter>i
-:imap <C-t> <Esc>:FZF<kEnter>i
+:imap <C-t> <Esc>:FZF<kEnter>
 
 " don't clutter up the current directory with backups and swap files.
 set backupdir=~/.nvim/tmp
