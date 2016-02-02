@@ -176,6 +176,7 @@ let g:bufferline_modified = '*'
 " If we run out of space, 'scroll' the list.
 let g:bufferline_rotate = 2
 
+
 " ------- OPERATOR-FLASHY PLUGIN -------
 
 " Enable operator-flashy
