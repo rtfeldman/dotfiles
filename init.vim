@@ -88,8 +88,10 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-:autocmd InsertEnter * set cul
-:autocmd InsertLeave * set nocul
+" Show cursor line in normal mode
+set cursorline
+:autocmd InsertEnter * set nocursorline
+:autocmd InsertLeave * set cursorline
 
 " Works in normal mode, must press Esc first
 :map <C-s> :w<kEnter>
