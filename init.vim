@@ -78,6 +78,12 @@ let g:buftabline_indicators = 1
 " only show buftabline when there are at least 2 buffers open
 let g:buftabline_show = 1
 
+" Don't display current buffer with bold, and reduce contrast on the others.
+hi BufTabLineCurrent term=none
+hi default link BufTabLineFill LineNr
+hi default link BufTabLineActive LineNr
+hi default link BufTabLineHidden LineNr
+
 " elm-vim
 let g:elm_format_autosave = 1
 
