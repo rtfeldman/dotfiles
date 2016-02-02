@@ -50,8 +50,8 @@ Install git and bash completion:
 ```bash
 brew install git bash-completion
 brew install fzf
-brew install pt
-brew install nvim
+brew install ag
+brew install neovim/neovim/neovim
 ```
 
 ...then add the following to `~/.bash-profile` to activate bash completion:
