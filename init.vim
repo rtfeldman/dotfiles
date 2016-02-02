@@ -201,6 +201,9 @@ let g:ag_working_path_mode="r"
 " Have ag.vim use our ignores list
 let g:ag_prg="ag --nocolor " . ag_ignores . " --vimgrep"
 
+" Pass --smart-case to ag by default
+let g:AgSmartCase = 1
+
 
 " ------- CTRLP PLUGIN ------
 
