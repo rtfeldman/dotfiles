@@ -150,7 +150,7 @@ if has('mouse')
 endif
 
 " Wild ignores
-set wildignore+=*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.gif,*.bmp,*.tif,*.tiff,*.mpg,*.mpeg,*.psd
+set wildignore+=*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.gif,*.bmp,*.tif,*.tiff,*.mpg,*.mpeg,*.psd,*.ico,*.cur
 
 
 " Only do this part when compiled with support for autocommands.
