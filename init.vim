@@ -81,9 +81,6 @@ augroup BWCCreateDir
   autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
 
-" Refresh plugins more often. Useful for vim-bufferline.
-set updatetime=750
-
 " Do diffs with a vertical side-by-side like GitHub.
 set diffopt+=vertical
 
