@@ -34,8 +34,8 @@ let ag_ignores = '--ignore "vendor/" --ignore "*.png" --ignore "*.jpg" --ignore 
 " Have ag.vim always start from project root instead of cwd
 let g:ag_working_path_mode="r"
 
-" Have ag.vim respect .gitignore
-let g:ag_prg="ag " . ag_ignores . " -l -g "" --vimgrep"
+" Have ag.vim use our ignores list
+let g:ag_prg="ag " . ag_ignores . " --vimgrep"
 
 " Use system clipboard
 set clipboard=unnamed
@@ -43,7 +43,7 @@ set clipboard=unnamed
 " Do diffs with a vertical side-by-side like GitHub
 set diffopt+=vertical
 
-" FZF
+" Have FZF use ag, with our ignores, and without searching inside files
 let $FZF_DEFAULT_COMMAND = 'ag ' . ag_ignores . ' -l -g ""'
 
 " Incorporate fzf into Neovim's Statusline
