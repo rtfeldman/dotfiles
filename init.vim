@@ -21,9 +21,12 @@ call plug#end()
 " change the mapleader from \ to ,
 let g:mapleader=","
 
-" Use ; instead of : and ;; instead of the original ;
+syntax enable
+set background=dark
+colorscheme hybrid
+
+" Use ; instead of : because honestly the default ; is pretty worthless.
 " http://vim.wikia.com/wiki/Map_semicolon_to_colon
-noremap ;; ;
 map ; :
 
 " Use system clipboard
@@ -65,10 +68,6 @@ function! s:fzf_statusline()
 endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
-
-syntax enable
-set background=dark
-colorscheme hybrid
 
 " Don't show the status line
 set laststatus=0
@@ -239,4 +238,3 @@ augroup END
 let g:syntastic_haskell_checkers = ['hdevtools']
 let g:syntastic_coffeescript_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri']
-
