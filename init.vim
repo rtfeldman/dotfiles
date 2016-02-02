@@ -90,11 +90,6 @@ set laststatus=0
 " Use the system clipboard.
 set clipboard=unnamed
 
-" Show cursor line in normal mode
-set cursorline
-:autocmd InsertEnter * set nocursorline
-:autocmd InsertLeave * set cursorline
-
 " don't clutter up the current directory with backups and swap files.
 set backupdir=~/.nvim/tmp
 set directory=~/.nvim/tmp
