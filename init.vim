@@ -100,11 +100,11 @@ set cursorline
 
 " Works in normal mode, must press Esc first
 :map <C-s> :w<kEnter>
-:map <C-t> :FZF<kEnter>
+:map <C-p> :FZF<kEnter>
 
 " Works in insert mode, saves and puts back in insert mode
 :imap <C-s> <Esc>:w<kEnter>i
-:imap <C-t> <Esc>:FZF<kEnter>
+:imap <C-p> <Esc>:FZF<kEnter>
 
 " don't clutter up the current directory with backups and swap files.
 set backupdir=~/.nvim/tmp

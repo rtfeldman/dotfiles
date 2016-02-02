@@ -64,4 +64,4 @@ fi
 
 Install iTerm2, then add a custom modifier for Cmd+S that has it send
 hex code 0x13 (Ctrl-S, which nvim will then use to Save). Do the same for
-Cmd+O and 0x14 (Ctrl-T).
+Cmd+O and 0x10 (Ctrl-P).
