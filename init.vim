@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
   " Plugins that make for a nice general UX
   Plug 'tpope/vim-fugitive'
   Plug 'kien/ctrlp.vim'
-  Plug 'ap/vim-buftabline'
+  Plug 'rtfeldman/vim-bufferline'
   Plug 'rking/ag.vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
@@ -156,12 +156,10 @@ let g:hybrid_reduced_contrast = 1
 
 colorscheme hybrid
 
-" Reduce contrast on buffer tab bar
-hi default BufTabLineFill term=none
-hi default BufTabLineCurrent ctermfg=gray guifg=gray
-hi default BufTabLineHidden ctermfg=darkgray guifg=darkgray
-hi default BufTabLineActive ctermfg=darkgray guifg=darkgray
+" ------- VIM-BUFFERLINE PLUGIN -------
 
+" Use * instead of + to denote modification
+let g:bufferline_modified = '*'
 
 " ------- OPERATOR-FLASHY PLUGIN -------
 
