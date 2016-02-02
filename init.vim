@@ -33,20 +33,21 @@ let g:mapleader=","
 map ; :
 
 " Cycle through buffers with tab and shif-tab in normal mode
-nnoremap <silent> <Tab> :bnext!<CR>
-nnoremap <silent> <S-Tab> :bprevious!<CR>
-nnoremap <silent> <leader>w :bdelete<CR>
+nnoremap <silent> <Tab> :silent bnext!<CR>
+nnoremap <silent> <S-Tab> :silent bprevious!<CR>
+nnoremap <silent> <leader>w :silent bdelete<CR>
+nnoremap <silent> <leader>W :silent bdelete!<CR>
 " Jump to a particular buffer with <Leader> followed by buffer number.
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>0 :10b<CR>
+nnoremap <silent> <Leader>1 :silent 1b<CR>
+nnoremap <silent> <Leader>2 :silent 2b<CR>
+nnoremap <silent> <Leader>3 :silent 3b<CR>
+nnoremap <silent> <Leader>4 :silent 4b<CR>
+nnoremap <silent> <Leader>5 :silent 5b<CR>
+nnoremap <silent> <Leader>6 :silent 6b<CR>
+nnoremap <silent> <Leader>7 :silent 7b<CR>
+nnoremap <silent> <Leader>8 :silent 8b<CR>
+nnoremap <silent> <Leader>9 :silent 9b<CR>
+nnoremap <silent> <Leader>0 :silent 10b<CR>
 
 " Ctrl+S saves from either insert mode or normal mode.
 :map <C-s> :w<kEnter>
