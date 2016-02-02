@@ -180,7 +180,7 @@ let ag_ignores = '--ignore "vendor/" --ignore "*.png" --ignore "*.jpg" --ignore 
 let g:ag_working_path_mode="r"
 
 " Have ag.vim use our ignores list
-let g:ag_prg="ag " . ag_ignores . " --vimgrep"
+let g:ag_prg="ag --nocolor " . ag_ignores . " --vimgrep"
 
 
 " ------- CTRLP PLUGIN ------
