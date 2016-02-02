@@ -185,9 +185,10 @@ let g:ag_prg="ag --nocolor " . ag_ignores . " --vimgrep"
 
 " ------- CTRLP PLUGIN ------
 
-" Configure CtrlP
-let g:ctrlp_match_window_bottom = 0
+" Show results in top-to-bottom order instead of bottom-to-top
 let g:ctrlp_match_window_reversed = 0
+
+" Incorporate our Ag ignore list into CtrlP
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" ' . ag_ignores
 
 
