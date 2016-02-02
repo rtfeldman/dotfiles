@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
   Plug 'kana/vim-operator-user' " vim-operator-flashy depends on this
   Plug 'haya14busa/vim-operator-flashy'
+  Plug 'ntpeters/vim-better-whitespace'
 
   " Plugins individual to my setup
   Plug 'w0ng/vim-hybrid' " Theme
@@ -249,3 +250,7 @@ augroup END
 let g:syntastic_haskell_checkers = ['hdevtools']
 let g:syntastic_coffeescript_checkers = ['coffee']
 let g:syntastic_ruby_checkers = ['mri']
+
+" Strip trailing whitspace on save, with the given exceptions.
+autocmd BufWritePre * StripWhitespace
+let g:better_whitespace_filetypes_blacklist = ['md', 'diff', 'gitcommit', 'unite', 'qf', 'help']
