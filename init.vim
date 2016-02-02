@@ -43,8 +43,8 @@ map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
 " Flash dark blue on yank
-hi default Flashy term=bold ctermbg=darkblue guibg=darkblue
-hi default Cursor ctermbg=darkblue cterm=bold guibg=darkblue
+hi default Flashy term=bold ctermbg=blue guibg=blue ctermfg=black guifg=black
+hi default Cursor cterm=bold
 let g:operator#flashy#flash_time = 250
 
 " Cycle through buffers with tab and shif-tab in normal mode
