@@ -22,6 +22,12 @@ let g:mapleader=","
 noremap ;; ;
 map ; :
 
+" Use system clipboard
+set clipboard=unnamed
+
+" Do diffs with a vertical side-by-side like GitHub
+set diffopt+=vertical
+
 let g:base16_shell_path='/Users/rtfeldman/code/base16-builder/output/shell/'
 if !has('gui_running')
   if exists("g:base16_shell_path")
@@ -41,12 +47,6 @@ let g:ag_working_path_mode="r"
 
 " Have ag.vim use our ignores list
 let g:ag_prg="ag " . ag_ignores . " --vimgrep"
-
-" Use system clipboard
-set clipboard=unnamed
-
-" Do diffs with a vertical side-by-side like GitHub
-set diffopt+=vertical
 
 " Have FZF use ag, with our ignores, and without searching inside files
 let $FZF_DEFAULT_COMMAND = 'ag ' . ag_ignores . ' -l -g ""'
