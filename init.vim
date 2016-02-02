@@ -214,18 +214,6 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" ' . ag_ignores
 
 
-" ------- BUFTABLINE PLUGIN -------
-
-" Show separators between buffers in tabline
-let g:buftabline_separators = 1
-
-" Show in buftabline when a buffer is modified
-let g:buftabline_indicators = 1
-
-" Only show buftabline when there are at least 2 buffers open
-let g:buftabline_show = 1
-
-
 " ------- ELM-VIM PLUGIN -------
 
 " Run elm-format on autosave
