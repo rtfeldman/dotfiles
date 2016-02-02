@@ -25,8 +25,8 @@ if !has('gui_running')
 endif
 
 " Cycle through buffers with tab and shif-tab in normal mode
-:nnoremap <silent> <Tab> :bnext<CR>
-:nnoremap <silent> <S-Tab> :bprevious<CR>
+:nnoremap <silent> <Tab> :bnext!<CR>
+:nnoremap <silent> <S-Tab> :bprevious!<CR>
 :nnoremap <silent> <leader>w :bdelete<CR>
 
 let ag_ignores = '--ignore "vendor/" --ignore "*.png" --ignore "*.jpg" --ignore "*.jpeg" --ignore "*.gif" --ignore "*.bmp" --ignore "*.tif" --ignore "*.tiff" --ignore "*.mpg" --ignore "*.mpeg" --ignore "*.cur" --ignore "*.ico" --ignore "*.psd"'
