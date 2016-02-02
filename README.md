@@ -62,6 +62,9 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 ```
 
-Install iTerm2, then add a custom modifier for Cmd+S that has it send
-hex code 0x13 (Ctrl-S, which nvim will then use to Save). Do the same for
-Cmd+O and 0x10 (Ctrl-P).
+Install iTerm2, then:
+
+* Add a custom modifier for Cmd+S that has it send
+hex code 0x13 (Ctrl-S, which nvim will then use to Save).
+* Do the same for Cmd+O and 0x10 (Ctrl-P).
+* Import the nvim.itermcolors found in this repo.
