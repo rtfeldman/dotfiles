@@ -1,17 +1,21 @@
 call plug#begin('~/.vim/plugged')
-  Plug 'w0ng/vim-hybrid'
+  " Plugins that make for a nice general UX
   Plug 'tpope/vim-fugitive'
-  Plug 'elmcast/elm-vim', { 'for': 'elm' }
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'ap/vim-buftabline'
   Plug 'rking/ag.vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
-  Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
   Plug 'henrik/vim-indexed-search'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+  " Plugins individual to my setup
+  Plug 'w0ng/vim-hybrid'
+  Plug 'elmcast/elm-vim', { 'for': 'elm' }
+  Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
   Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
+  Plug 'vim-coffee-script'
 call plug#end()
 
 " change the mapleader from \ to ,
