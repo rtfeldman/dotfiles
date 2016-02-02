@@ -17,6 +17,11 @@ call plug#end()
 " change the mapleader from \ to ,
 let g:mapleader=","
 
+" Use ; instead of : and ;; instead of the original ;
+" http://vim.wikia.com/wiki/Map_semicolon_to_colon
+noremap ;; ;
+map ; :
+
 let g:base16_shell_path='/Users/rtfeldman/code/base16-builder/output/shell/'
 if !has('gui_running')
   if exists("g:base16_shell_path")
