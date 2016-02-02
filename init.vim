@@ -8,6 +8,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'rking/ag.vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
+  Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
+  Plug 'henrik/vim-indexed-search'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
 call plug#end()
 
 " change the mapleader from \ to ,
