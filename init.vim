@@ -1,8 +1,7 @@
 call plug#begin('~/.vim/plugged')
   " Plugins that make for a nice general UX
   Plug 'tpope/vim-fugitive'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
+  Plug 'kien/ctrlp.vim'
   Plug 'ap/vim-buftabline'
   Plug 'rking/ag.vim'
   Plug 'tomtom/tcomment_vim'
@@ -62,11 +61,10 @@ let g:ag_working_path_mode="r"
 " Have ag.vim use our ignores list
 let g:ag_prg="ag " . ag_ignores . " --vimgrep"
 
-" Have FZF use ag, with our ignores, and without searching inside files
-let $FZF_DEFAULT_COMMAND = 'ag ' . ag_ignores . ' -l -g ""'
-
-" Disable FZF's statusline integration (since we have no statusline)
-let g:fzf_nvim_statusline = 0 " disable statusline overwriting
+" Configure CtrlP
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" ' . ag_ignores
 
 " Don't show the status line
 set laststatus=0
