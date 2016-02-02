@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ntpeters/vim-better-whitespace'
 
   " Plugins individual to my setup
-  Plug 'chriskempson/base16-vim' " Theme
+  Plug 'w0ng/vim-hybrid' " Theme
   Plug 'elmcast/elm-vim', { 'for': 'elm' }
   Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
   Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
@@ -26,7 +26,7 @@ let g:mapleader=","
 
 syntax enable
 set background=dark
-colorscheme base16-twilight
+colorscheme hybrid
 
 " Use ; instead of : because honestly the default ; is pretty worthless.
 " http://vim.wikia.com/wiki/Map_semicolon_to_colon
