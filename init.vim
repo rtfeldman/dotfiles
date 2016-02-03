@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Olical/vim-enmasse'
   Plug 'kana/vim-operator-user' " vim-operator-flashy depends on this
   Plug 'haya14busa/vim-operator-flashy'
+  Plug 'milkypostman/vim-togglelist'
   Plug 'ntpeters/vim-better-whitespace'
 
   " Plugins individual to my development setup
@@ -49,7 +50,7 @@ nnoremap <silent> <leader>W :silent bdelete!<CR>
 nnoremap <silent> <esc> :nohlsearch<Bar>:echo<CR><esc>
 
 " Press Space to toggle quickfix
-nnoremap <silent> <space> :QFix<CR>
+nnoremap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
