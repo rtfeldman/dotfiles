@@ -1,0 +1,14 @@
+vendor/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.mpg
+*.mpeg
+*.cur
+*.ico
+*.psd
+

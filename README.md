@@ -10,9 +10,10 @@ Configuration files I use.
 3. `git clone git@github.com:rtfeldman/dotfiles.git`
 4. `cd dotfiles`
 5. `ln -fs $(pwd)/init.vim ~/.config/nvim/init.vim`
-6. `brew install ctags`
-7. `gem install CoffeeTags`
-8. start nvim!
+6. `ln -fs $(pwd)/.agignore ~/.agignore
+7. `brew install ctags`
+8. `gem install CoffeeTags`
+9. start nvim!
 
 ## Fresh Sublime Text 3 Setup
 
