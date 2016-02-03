@@ -13,7 +13,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'kana/vim-operator-user' " vim-operator-flashy depends on this
   Plug 'haya14busa/vim-operator-flashy'
   Plug 'ntpeters/vim-better-whitespace'
-  Plug 'mhinz/vim-grepper'
 
   " Plugins individual to my development setup
   Plug 'w0ng/vim-hybrid' " Theme
@@ -180,9 +179,18 @@ hi default Flashy term=bold ctermbg=blue guibg=blue ctermfg=black guifg=black
 hi default Cursor cterm=bold
 let g:operator#flashy#flash_time = 250
 
-" ------- GREPPER PLUGIN ------
-"
-nnoremap <leader>ag  :Grepper -jump -tool ag -noquickfix -open  -grepprg ag -S --vimgrep <cr>
+" ------- THE_SILVER_SEARCHER (AKA AG) PLUGIN ------
+
+let ag_ignores = '--ignore "vendor/" --ignore "*.png" --ignore "*.jpg" --ignore "*.jpeg" --ignore "*.gif" --ignore "*.bmp" --ignore "*.tif" --ignore "*.tiff" --ignore "*.mpg" --ignore "*.mpeg" --ignore "*.cur" --ignore "*.ico" --ignore "*.psd"'
+
+" Have ag.vim always start from project root instead of cwd
+let g:ag_working_path_mode="r"
+
+" Have ag.vim use our ignores list
+let g:ag_prg="ag --nocolor " . ag_ignores . " --vimgrep"
+
+" Pass --smart-case to ag by default
+let g:AgSmartCase = 1
 
 " ------- BUFFERGATOR PLUGIN -------
 
@@ -195,7 +203,7 @@ let g:buffergator_sort_regime = 'mru'
 let g:ctrlp_match_window_reversed = 0
 
 " Incorporate our Ag ignore list into CtrlP
-let g:ctrlp_user_command = 'ag %s -l -S --nocolor -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" ' . ag_ignores
 
 
 " ------- ELM-VIM PLUGIN -------
