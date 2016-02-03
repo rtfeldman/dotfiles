@@ -176,7 +176,7 @@ nmap Y <Plug>(operator-flashy)$
 
 " Flash dark blue on yank
 hi default Flashy term=bold ctermbg=blue guibg=blue ctermfg=black guifg=black
-hi default Cursor cterm=bold
+hi default Cursor cterm=bold ctermbg=blue guibg=blue ctermfg=black guifg=black
 let g:operator#flashy#flash_time = 250
 
 " ------- THE_SILVER_SEARCHER (AKA AG) PLUGIN ------
