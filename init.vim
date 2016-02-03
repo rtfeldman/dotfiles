@@ -32,6 +32,9 @@ let g:mapleader=","
 " http://vim.wikia.com/wiki/Map_semicolon_to_colon
 map ; :
 
+" Open new split panes to right and bottom, which feels more natural than Vim’s default:
+set splitbelow
+set splitright
 
 " <leader>w closes current buffer, and <leader>W closes without saving
 nnoremap <silent> <leader>w :silent bdelete<CR>
