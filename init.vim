@@ -32,22 +32,10 @@ let g:mapleader=","
 " http://vim.wikia.com/wiki/Map_semicolon_to_colon
 map ; :
 
-" Cycle through buffers with tab and shif-tab in normal mode
-nnoremap <silent> <Tab> :silent bnext!<CR>
-nnoremap <silent> <S-Tab> :silent bprevious!<CR>
+
+" <leader>w closes current buffer, and <leader>W closes without saving
 nnoremap <silent> <leader>w :silent bdelete<CR>
 nnoremap <silent> <leader>W :silent bdelete!<CR>
-" Jump to a particular buffer with <Leader> followed by buffer number.
-nnoremap <silent> <Leader>1 :silent 1b<CR>
-nnoremap <silent> <Leader>2 :silent 2b<CR>
-nnoremap <silent> <Leader>3 :silent 3b<CR>
-nnoremap <silent> <Leader>4 :silent 4b<CR>
-nnoremap <silent> <Leader>5 :silent 5b<CR>
-nnoremap <silent> <Leader>6 :silent 6b<CR>
-nnoremap <silent> <Leader>7 :silent 7b<CR>
-nnoremap <silent> <Leader>8 :silent 8b<CR>
-nnoremap <silent> <Leader>9 :silent 9b<CR>
-nnoremap <silent> <Leader>0 :silent 10b<CR>
 
 " Ctrl+S saves from either insert mode or normal mode.
 :map <C-s> :w<kEnter>
