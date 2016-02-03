@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
   Plug 'henrik/vim-indexed-search'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  Plug 'vim-scripts/AutoComplPop'
   Plug 'kana/vim-operator-user' " vim-operator-flashy depends on this
   Plug 'haya14busa/vim-operator-flashy'
   Plug 'ntpeters/vim-better-whitespace'
