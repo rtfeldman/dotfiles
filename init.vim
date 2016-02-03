@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'kien/ctrlp.vim'
   Plug 'jeetsukumaran/vim-buffergator'
-  Plug 'rking/ag.vim'
+  Plug 'wincent/ferret'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
   Plug 'henrik/vim-indexed-search'
@@ -179,16 +179,6 @@ hi default Flashy term=bold ctermbg=blue guibg=blue ctermfg=black guifg=black
 hi default Cursor cterm=bold ctermbg=blue guibg=blue ctermfg=black guifg=black
 let g:operator#flashy#flash_time = 250
 
-" ------- THE_SILVER_SEARCHER (AKA AG) PLUGIN ------
-
-" Have ag.vim always start from project root instead of cwd
-let g:ag_working_path_mode="r"
-
-" Have ag.vim use our ignores list
-let g:ag_prg="ag --nocolor --vimgrep"
-
-" Pass --smart-case to ag by default
-let g:AgSmartCase = 1
 
 " ------- BUFFERGATOR PLUGIN -------
 
