@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'henrik/vim-indexed-search'
   Plug 'vim-scripts/AutoComplPop'
+  Plug 'Olical/vim-enmasse'
   Plug 'kana/vim-operator-user' " vim-operator-flashy depends on this
   Plug 'haya14busa/vim-operator-flashy'
   Plug 'ntpeters/vim-better-whitespace'
