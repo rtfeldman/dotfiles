@@ -4,7 +4,6 @@ call plug#begin('~/.vim/plugged')
   " Plugins that make for a nice general UX
   Plug 'tpope/vim-fugitive'
   Plug 'kien/ctrlp.vim'
-  Plug 'rtfeldman/vim-bufferline'
   Plug 'rking/ag.vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
@@ -165,14 +164,6 @@ let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 
 colorscheme hybrid
-
-" ------- VIM-BUFFERLINE PLUGIN -------
-
-" Use * instead of + to denote modification
-let g:bufferline_modified = '*'
-
-" If we run out of space, 'scroll' the list.
-let g:bufferline_rotate = 2
 
 
 " ------- OPERATOR-FLASHY PLUGIN -------
