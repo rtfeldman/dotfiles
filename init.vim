@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
   " Plugins that make for a nice general UX
   Plug 'tpope/vim-fugitive'
   Plug 'kien/ctrlp.vim'
+  Plug 'jeetsukumaran/vim-buffergator'
   Plug 'rking/ag.vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
@@ -190,6 +191,10 @@ let g:ag_prg="ag --nocolor " . ag_ignores . " --vimgrep"
 " Pass --smart-case to ag by default
 let g:AgSmartCase = 1
 
+" ------- BUFFERGATOR PLUGIN -------
+
+let g:buffergator_viewport_split_policy = 'B'
+let g:buffergator_sort_regime = 'mru'
 
 " ------- CTRLP PLUGIN ------
 
