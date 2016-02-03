@@ -117,7 +117,7 @@ else
 endif
 
 set history=99    " keep 99 lines of command line history
-set ruler   " show the cursor position all the time
+set noruler " Don't show the line or character count in the cmdline.
 set showcmd   " display incomplete commands
 set incsearch   " do incremental searching
 set colorcolumn=80 " show a vertical line at 80 chars
