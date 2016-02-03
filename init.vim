@@ -44,8 +44,11 @@ nnoremap <silent> <leader>W :silent bdelete!<CR>
 :map <C-s> :w<kEnter>
 :imap <C-s> <Esc>:w<kEnter>i
 
-" Press Space to turn off highlighting and clear any message already displayed.
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+" Press Esc to turn off highlighting and clear any message already displayed.
+nnoremap <silent> <esc> :nohlsearch<Bar>:echo<CR><esc>
+
+" Press Space to toggle quickfix
+nnoremap <silent> <space> :QFix<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
