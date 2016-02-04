@@ -37,8 +37,8 @@ map ; :
 nnoremap <silent> <leader>w :silent bdelete<CR>
 nnoremap <silent> <leader>W :silent bdelete!<CR>
 
-" <leader>q opens quickfix
-nnoremap <silent> <leader>q :silent :copen<CR>
+" Don't use Ex mode, use Q to open Quickfix
+nnoremap Q :silent :copen<CR>
 
 " Ctrl+S saves from either insert mode or normal mode.
 map <C-s> :w<kEnter>
@@ -117,9 +117,6 @@ set noruler " Don't show the line or character count in the cmdline.
 set showcmd   " display incomplete commands
 set incsearch   " do incremental searching
 set colorcolumn=80 " show a vertical line at 80 chars
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
