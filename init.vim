@@ -48,6 +48,9 @@ nnoremap <silent> <esc> :nohlsearch<Bar>:cclose<BAR>:echo<CR><esc>
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
+" Move between windows with Tab
+map <tab> <C-w><C-w>
+
 
 " ------- GENERAL UX -------
 
