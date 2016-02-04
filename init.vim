@@ -60,6 +60,10 @@ nnoremap <tab> <C-w><C-w>
 " Don't wrap long lines
 set nowrap
 
+" Highlight lines longer than 80 characters as errors.
+" :au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
+:2mat ErrorMsg '\%81v.'
+
 " mkdir -p on save when editing a file in a directory that doesn't exist yet
 function s:MkNonExDir(file, buf)
   if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
@@ -116,7 +120,6 @@ set history=99    " keep 99 lines of command line history
 set noruler " Don't show the line or character count in the cmdline.
 set showcmd   " display incomplete commands
 set incsearch   " do incremental searching
-set colorcolumn=80 " show a vertical line at 80 chars
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
