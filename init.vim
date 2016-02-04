@@ -37,6 +37,9 @@ map ; :
 nnoremap <silent> <leader>w :silent bdelete<CR>
 nnoremap <silent> <leader>W :silent bdelete!<CR>
 
+" <leader>q opens quickfix
+nnoremap <silent> <leader>q :silent :copen<CR>
+
 " Ctrl+S saves from either insert mode or normal mode.
 map <C-s> :w<kEnter>
 imap <C-s> <Esc>:w<kEnter>i
