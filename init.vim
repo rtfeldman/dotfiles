@@ -24,6 +24,18 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 
+" ------- THEME -------
+
+syntax enable
+
+set background=dark
+
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+
+colorscheme hybrid
+
+
 " ------- KEY BINDINGS -------
 
 " change the mapleader from \ to ,
@@ -150,18 +162,6 @@ else
   set autoindent    " always set autoindenting on
 
 endif " has("autocmd")
-
-
-" ------- THEME -------
-
-syntax enable
-
-set background=dark
-
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1
-
-colorscheme hybrid
 
 
 " ------- OPERATOR-FLASHY PLUGIN -------
