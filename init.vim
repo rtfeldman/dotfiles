@@ -181,6 +181,9 @@ let g:ag_prg="ag --nocolor --vimgrep"
 " Pass --smart-case to ag by default
 let g:AgSmartCase = 1
 
+" Bind <leader>a to bring up Ag prompt
+nnoremap <expr> <leader>a ":Ag! "
+
 " ------- BUFFERGATOR PLUGIN -------
 
 let g:buffergator_viewport_split_policy = 'B'
