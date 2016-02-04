@@ -20,7 +20,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'elmcast/elm-vim', { 'for': 'elm' }
   Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
   Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
-  Plug 'vim-coffee-script'
+  Plug 'vim-coffee-script', { 'for': 'coffee' }
 call plug#end()
 
 
