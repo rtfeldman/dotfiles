@@ -38,8 +38,8 @@ nnoremap <silent> <leader>w :silent bdelete<CR>
 nnoremap <silent> <leader>W :silent bdelete!<CR>
 
 " Ctrl+S saves from either insert mode or normal mode.
-:map <C-s> :w<kEnter>
-:imap <C-s> <Esc>:w<kEnter>i
+map <C-s> :w<kEnter>
+imap <C-s> <Esc>:w<kEnter>i
 
 " Press Esc to turn off highlighting, close quickfix, and clear the cmdline
 nnoremap <silent> <esc> :nohlsearch<Bar>:cclose<BAR>:echo<CR><esc>
