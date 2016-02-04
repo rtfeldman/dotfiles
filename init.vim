@@ -52,7 +52,7 @@ nnoremap <silent> <esc> :nohlsearch<Bar>:cclose<BAR>:echo<CR><esc>
 inoremap <C-U> <C-G>u<C-U>
 
 " Move between windows with Tab
-map <tab> <C-w><C-w>
+nnoremap <tab> <C-w><C-w>
 
 
 " ------- GENERAL UX -------
