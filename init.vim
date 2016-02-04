@@ -119,6 +119,9 @@ set autoindent
 " Line numbers!
 set number
 
+" Color line numbers similarly to colorcolumn
+hi LineNr ctermfg=0 ctermbg=8 cterm=none
+
 " ignore case when searching, except when searching for caps, in which case
 " don't ignore case.
 set ignorecase
