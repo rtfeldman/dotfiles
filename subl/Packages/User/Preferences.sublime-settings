@@ -30,7 +30,7 @@
 		"log",
 		"elm-stuff"
 	],
-	"font_size": 22,
+	"font_size": 20,
 	"ignored_packages":
 	[
 		"Vintage"
