@@ -1,0 +1,20 @@
+"*":
+  core:
+    audioBeep: false
+    projectHome: "/Users/rtfeldman/code"
+  editor:
+    fontSize: 15
+    invisibles: {}
+  "exception-reporting":
+    userId: "fbf00755-a9d6-7ff8-fb49-12922bde9280"
+  "language-elm":
+    elmOraclePath: "/usr/local/bin/elm-oracle"
+  linter:
+    showErrorPanel: false
+  "linter-elm-make":
+    elmMakeExecutablePath: "/usr/local/bin/elm-make"
+  welcome:
+    showOnStartup: false
+".elm.source":
+  editor:
+    tabLength: 4
