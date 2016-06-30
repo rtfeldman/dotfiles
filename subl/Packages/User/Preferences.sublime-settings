@@ -2,7 +2,6 @@
 	"auto_match_enabled": false,
 	"caret_style": "solid",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-	"detect_indentation": false,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -30,7 +29,7 @@
 		"log",
 		"elm-stuff"
 	],
-	"font_size": 20,
+	"font_size": 23,
 	"ignored_packages":
 	[
 		"Vintage"

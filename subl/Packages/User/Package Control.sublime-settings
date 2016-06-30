@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"AceJump",
 		"AdvancedNewFile",
 		"Alignment",
 		"AlignTab",
@@ -25,9 +26,12 @@
 		"SASS Build",
 		"Schemr",
 		"SCSS",
+		"Select Quoted",
 		"SmartMarkdown",
+		"Solarized Color Scheme",
 		"SublimeREPL",
 		"Surround",
+		"Theme - Autumn",
 		"Theme - Sodarized",
 		"Trailing Punctuation",
 		"VAlign",
@@ -35,6 +39,5 @@
 	],
 	"repositories":
 	[
-		"https://raw.githubusercontent.com/deadfoxygrandpa/Elm.tmLanguage/beta/beta-repository.json"
 	]
 }
