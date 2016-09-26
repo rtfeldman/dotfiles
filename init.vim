@@ -41,9 +41,6 @@ colorscheme hybrid
 " change the mapleader from \ to ,
 let g:mapleader=","
 
-" Use ; instead of : because honestly the default ; is pretty worthless.
-" http://vim.wikia.com/wiki/Map_semicolon_to_colon
-map ; :
 
 " <leader>w closes current buffer, and <leader>W closes without saving
 nnoremap <silent> <leader>w :silent bdelete<CR>
