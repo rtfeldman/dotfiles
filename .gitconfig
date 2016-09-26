@@ -7,7 +7,7 @@
 [web]
 	browser = google-chrome
 [push]
-	default = matching
+	default = simple
 [color]
 	ui = auto
 [color "branch"]
