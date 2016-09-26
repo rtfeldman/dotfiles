@@ -1,18 +1,51 @@
 "*":
   core:
     audioBeep: false
+    disabledPackages: [
+      "vim-mode-plus-ex-mode"
+      "file-icons"
+      "elmjutsu"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "Thumbs.db"
+      ".codekit-cache"
+      "bower_components"
+      "node_modules"
+      "vendor"
+    ]
+    packagesWithKeymapsDisabled: [
+      "ex-mode"
+    ]
     projectHome: "/Users/rtfeldman/code"
   editor:
-    fontSize: 15
+    atomicSoftTabs: false
+    fontSize: 17
     invisibles: {}
+  "elm-format": {}
+  elmjutsu:
+    autocompleteEnabled: true
+    autocompleteMinChars: 2
+    cacheDirectory: "/var/folders/f2/bgdp00xs327b2qx7mmg6jkbh0000gn/T/elmjutsu5567mKaUceRFop4X"
+    hyperclickEnabled: true
   "exception-reporting":
     userId: "fbf00755-a9d6-7ff8-fb49-12922bde9280"
   "language-elm":
+    autocompleteEnabled: false
     elmOraclePath: "/usr/local/bin/elm-oracle"
   linter:
+    errorPanelHeight: 288
+    showErrorInline: false
     showErrorPanel: false
   "linter-elm-make":
     elmMakeExecutablePath: "/usr/local/bin/elm-make"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode-plus":
+    useClipboardAsDefaultRegister: true
   welcome:
     showOnStartup: false
 ".elm.source":

@@ -22,6 +22,35 @@
 # * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 #
 # This file uses CoffeeScript Object Notation (CSON).
-# If you are unfamiliar with CSON, you can read more about it in the 
+# If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+
+# Make macros work with vim-mode-plus via
+# https://github.com/JunSuzukiJapan/atom-keyboard-macros-vim/issues/5#issuecomment-212849566
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'Q': 'atom-keyboard-macros-vim:call_last_kbd_macro'
+  ':': 'ex-mode:open'
+
+# Esc exits Visual Block Mode
+'atom-text-editor.vim-mode-plus-input':
+  'escape': 'vim-mode-plus:input-cancel'
+
+# Use roughly the keybindings from https://github.com/tpope/vim-surround
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'S': 'vim-mode-plus:surround-smart-word'
+  'd s': 'vim-mode-plus:delete-surround'
+  'c s': 'vim-mode-plus:change-surround'
+  'y s': 'vim-mode-plus:surround'
+  'y s w': 'vim-mode-plus:surround-word'
+  'y s m': 'vim-mode-plus:map-surround'
+  # via https://github.com/t9md/atom-vim-mode-plus/issues/303#issuecomment-229297375
+  'm m': 'bookmarks:toggle-bookmark'
+  'm n': 'bookmarks:jump-to-next-bookmark'
+  'm p': 'bookmarks:jump-to-previous-bookmark'
+  'm l': 'bookmarks:view-all'
+  'm c': 'bookmarks:clear-bookmarks'
+
+'atom-text-editor:not(.mini)':
+  'cmd-escape': 'linter:togglePanel'
