@@ -32,14 +32,14 @@
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'Q': 'atom-keyboard-macros-vim:call_last_kbd_macro'
   ':': 'ex-mode:open'
+  # Use roughly the keybindings from https://github.com/tpope/vim-surround
+  'S': 'vim-mode-plus:surround-smart-word'
 
 # Esc exits Visual Block Mode
 'atom-text-editor.vim-mode-plus-input':
   'escape': 'vim-mode-plus:input-cancel'
 
-# Use roughly the keybindings from https://github.com/tpope/vim-surround
 'atom-text-editor.vim-mode-plus.normal-mode':
-  'S': 'vim-mode-plus:surround-smart-word'
   'd s': 'vim-mode-plus:delete-surround'
   'c s': 'vim-mode-plus:change-surround'
   'y s': 'vim-mode-plus:surround'
@@ -53,4 +53,6 @@
   'm c': 'bookmarks:clear-bookmarks'
 
 'atom-text-editor:not(.mini)':
-  'cmd-escape': 'linter:togglePanel'
+  'cmd-escape': 'linter-ui-default:toggle-panel'
+  'ctrl-n': 'linter-ui-default:next'
+  'ctrl-N': 'linter-ui-default:previous'

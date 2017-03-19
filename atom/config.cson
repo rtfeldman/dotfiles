@@ -4,7 +4,6 @@
     disabledPackages: [
       "vim-mode-plus-ex-mode"
       "file-icons"
-      "elmjutsu"
     ]
     ignoredNames: [
       ".git"
@@ -16,34 +15,43 @@
       "bower_components"
       "node_modules"
       "vendor"
+      ".elmi"
+      ".elmo"
     ]
     packagesWithKeymapsDisabled: [
       "ex-mode"
     ]
     projectHome: "/Users/rtfeldman/code"
+    telemetryConsent: "limited"
+    useCustomTitleBar: true
   editor:
     atomicSoftTabs: false
-    fontSize: 17
     invisibles: {}
   "elm-format": {}
   elmjutsu:
     autocompleteEnabled: true
     autocompleteMinChars: 2
+    autocompleteSnippetsEnabled: true
     cacheDirectory: "/var/folders/f2/bgdp00xs327b2qx7mmg6jkbh0000gn/T/elmjutsu5567mKaUceRFop4X"
     hyperclickEnabled: true
+    typeAwareAutocompleteEnabled: true
   "exception-reporting":
     userId: "fbf00755-a9d6-7ff8-fb49-12922bde9280"
   "language-elm":
     autocompleteEnabled: false
     elmOraclePath: "/usr/local/bin/elm-oracle"
   linter:
-    errorPanelHeight: 288
+    errorPanelHeight: 702
+    lintOnChange: false
+    lintPreviewTabs: false
     showErrorInline: false
-    showErrorPanel: false
   "linter-elm-make":
     elmMakeExecutablePath: "/usr/local/bin/elm-make"
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "linter-ui-default":
+    panelHeight: 200
+    panelRepresents: "Entire Project"
+    showTooltip: false
+  "tree-view": {}
   "vim-mode-plus":
     useClipboardAsDefaultRegister: true
   welcome:
