@@ -1,9 +1,10 @@
 "*":
   core:
     audioBeep: false
+    closeDeletedFileTabs: true
     disabledPackages: [
       "vim-mode-plus-ex-mode"
-      "file-icons"
+      "deprecation-cop"
     ]
     ignoredNames: [
       ".git"
@@ -20,12 +21,15 @@
     ]
     packagesWithKeymapsDisabled: [
       "ex-mode"
+      "linter-manager"
     ]
     projectHome: "/Users/rtfeldman/code"
     telemetryConsent: "limited"
-    useCustomTitleBar: true
+    titleBar: "hidden"
   editor:
     atomicSoftTabs: false
+    fontFamily: "Source Code Pro for Powerline"
+    fontSize: 16
     invisibles: {}
   "elm-format": {}
   elmjutsu:
@@ -34,24 +38,30 @@
     autocompleteSnippetsEnabled: true
     cacheDirectory: "/var/folders/f2/bgdp00xs327b2qx7mmg6jkbh0000gn/T/elmjutsu5567mKaUceRFop4X"
     hyperclickEnabled: true
-    typeAwareAutocompleteEnabled: true
   "exception-reporting":
     userId: "fbf00755-a9d6-7ff8-fb49-12922bde9280"
+  "flow-ide": {}
   "language-elm":
     autocompleteEnabled: false
     elmOraclePath: "/usr/local/bin/elm-oracle"
   linter:
-    errorPanelHeight: 702
     lintOnChange: false
     lintPreviewTabs: false
-    showErrorInline: false
   "linter-elm-make":
     elmMakeExecutablePath: "/usr/local/bin/elm-make"
   "linter-ui-default":
-    panelHeight: 200
+    hidePanelWhenEmpty: false
+    panelHeight: 107
     panelRepresents: "Entire Project"
     showTooltip: false
-  "tree-view": {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      jsonScopes: [
+        "none"
+      ]
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode-plus":
     useClipboardAsDefaultRegister: true
   welcome:

@@ -185,3 +185,5 @@
 	smudge = git-lfs smudge %f
 [rebase]
 	autosquash = true
+[rerere]
+	enabled = true

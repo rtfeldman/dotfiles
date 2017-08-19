@@ -8,19 +8,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'rking/ag.vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
-  Plug 'henrik/vim-indexed-search'
   Plug 'vim-scripts/AutoComplPop'
   Plug 'Olical/vim-enmasse'
   Plug 'kana/vim-operator-user' " vim-operator-flashy depends on this
   Plug 'haya14busa/vim-operator-flashy'
   Plug 'ntpeters/vim-better-whitespace'
+  Plug 'easymotion/vim-easymotion'
 
   " Plugins individual to my development setup
   Plug 'w0ng/vim-hybrid' " Theme
   Plug 'elmcast/elm-vim', { 'for': 'elm' }
   Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
   Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
-  Plug 'vim-coffee-script', { 'for': 'coffee' }
+  Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 call plug#end()
 
 
@@ -38,13 +38,11 @@ colorscheme hybrid
 
 " ------- KEY BINDINGS -------
 
-" change the mapleader from \ to ,
-let g:mapleader=","
-
+map <Leader> <Plug>(easymotion-prefix)
 
 " <leader>w closes current buffer, and <leader>W closes without saving
-nnoremap <silent> <leader>w :silent bdelete<CR>
-nnoremap <silent> <leader>W :silent bdelete!<CR>
+" nnoremap <silent> <leader>w :silent bdelete<CR>
+" nnoremap <silent> <leader>W :silent bdelete!<CR>
 
 " Don't use Ex mode, use Q to open Quickfix
 nnoremap Q :silent :copen<CR>

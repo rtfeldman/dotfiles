@@ -52,7 +52,9 @@
   'm l': 'bookmarks:view-all'
   'm c': 'bookmarks:clear-bookmarks'
 
-'atom-text-editor:not(.mini)':
-  'cmd-escape': 'linter-ui-default:toggle-panel'
+'atom-text-editor':
   'ctrl-n': 'linter-ui-default:next'
   'ctrl-N': 'linter-ui-default:previous'
+
+'atom-workspace':
+  'cmd-escape': 'linter-ui-default:toggle-panel'
