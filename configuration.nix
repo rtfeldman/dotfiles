@@ -10,17 +10,24 @@
       ./hardware-configuration.nix
     ];
 
+  # Allow nvidia drivers
+  nixpkgs.config.allowUnfree = true;
+
+  # Enable zsh
+  programs.zsh.enable = true;
+
+  # Enable OpenGL and PulseAudio
+  hardware.opengl.driSupport32Bit = true;
+  hardware.pulseaudio.enable = true;
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
-  # boot.loader.grub.efiSupport = true;
-  # boot.loader.grub.efiInstallAsRemovable = true;
-  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  #
   # Define on which hard drive you want to install Grub.
-  # boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+  boot.loader.grub.device = "/dev/sda";
 
-  # networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "focus"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Select internationalisation properties.
@@ -37,11 +44,14 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     wget
-    i3
-    git
-    vim
+
+    i3 i3lock compton
+
+    git python
+
     neovim
-    zsh
+
+    zsh tmux xclip fzf ssh-ident
   ];
 
   environment.variables = {
@@ -65,12 +75,13 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e";
+  services.xserver.dpi = 142;
+  services.xserver.videoDrivers = [ "nvidia" ];
 
-  
-  fonts.fontconfig.dpi = 220;
+  # This is needed *in addition to* services.xserver.dpi - otherwise browsers look bad.
+  fonts.fontconfig.dpi = 142;
 
-  # Enable the KDE Desktop Environment.
+  # Enable the i3 Window Manager
   services.xserver.windowManager.i3.enable = true;
 
   #services.xserver.synaptics = {
@@ -84,6 +95,10 @@
   #   uid = 1000;
   # };
 
+  # Compton is a visual compositor. Without it, I can see screen tearing on fullscreen video or when scrolling quickly.
+  services.compton.enable = true;
+  services.compton.vSync = "opengl-mswc";
+
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "17.03";
 
@@ -95,7 +110,6 @@
     }
   ];
 
-  boot.loader.grub.device = "/dev/sda";
 
   # networking.wireless.enable = true;
 
