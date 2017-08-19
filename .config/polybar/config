@@ -1,0 +1,166 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #222
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[bar/bottom]
+;monitor = ${env:MONITOR}
+width = 100%
+height = 48
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+dpi = 227
+
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = NotoSans-Regular:size=8;2
+font-1 = NotoSans-Regular:size=10
+font-2 = siji:pixelsize=10;1
+font-3 = NotoSans-Regular:size=10
+
+modules-left = i3
+modules-center = 
+modules-right = volume date 
+
+tray-position = right
+tray-padding = 0
+;tray-transparent = true
+;tray-background = #0063ff
+
+; wm-restack = i3
+; override-redirect = true
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+; label-focused-background = ${module/i3.label-focused-background}
+; label-focused-underline = ${module/i3.label-focused-underline}
+; label-focused-padding = ${module/i3.label-focused-padding}
+ 
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+; label-unfocused-padding = ${module/i3.label-occupied-padding}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+;label-visible-background = ${self.label-focused-background}
+;label-visible-underline = ${self.label-focused-underline}
+;label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+; label-urgent-background = ${module/i3.label-urgent-background}
+; label-urgent-padding = ${module/i3.label-urgent-padding}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+
+label = %date% %time%
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
