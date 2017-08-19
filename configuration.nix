@@ -47,11 +47,13 @@
 
     i3 i3lock compton
 
-    git python
+    git python gnumake
 
     neovim
 
     zsh tmux xclip fzf ssh-ident
+
+    binutils
   ];
 
   environment.variables = {
