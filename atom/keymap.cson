@@ -27,6 +27,9 @@
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
 
+'atom-text-editor.vim-mode-plus:.normal-mode':
+  'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+
 # Make macros work with vim-mode-plus via
 # https://github.com/JunSuzukiJapan/atom-keyboard-macros-vim/issues/5#issuecomment-212849566
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':

@@ -1,6 +1,7 @@
 "*":
   core:
     audioBeep: false
+    autoHideMenuBar: true
     closeDeletedFileTabs: true
     disabledPackages: [
       "vim-mode-plus-ex-mode"
@@ -28,7 +29,7 @@
     titleBar: "hidden"
   editor:
     atomicSoftTabs: false
-    fontFamily: "Source Code Pro for Powerline"
+    fontFamily: "Source Code Pro"
     fontSize: 16
     invisibles: {}
   "elm-format": {}
@@ -47,8 +48,7 @@
   linter:
     lintOnChange: false
     lintPreviewTabs: false
-  "linter-elm-make":
-    elmMakeExecutablePath: "/usr/local/bin/elm-make"
+  "linter-elm-make": {}
   "linter-ui-default":
     hidePanelWhenEmpty: false
     panelHeight: 107
