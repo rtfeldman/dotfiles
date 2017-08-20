@@ -45,11 +45,13 @@
   environment.systemPackages = with pkgs; [
     wget
 
-    i3 i3lock compton
+    gimp
+
+    i3 i3lock compton polybar
 
     git python gnumake
 
-    neovim
+    neovim firefox
 
     zsh tmux xclip fzf ssh-ident
 

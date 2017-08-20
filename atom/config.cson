@@ -53,6 +53,7 @@
     hidePanelWhenEmpty: false
     panelHeight: 107
     panelRepresents: "Entire Project"
+    showPanel: true
     showTooltip: false
   "prettier-atom":
     formatOnSaveOptions:
