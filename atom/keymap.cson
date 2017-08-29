@@ -26,9 +26,58 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
+'atom-text-editor.vim-mode-plus':
+  # Unbind ctrl-t so it can work normally
+  'ctrl-t': 'unset!'
 
-'atom-text-editor.vim-mode-plus:.normal-mode':
-  'ctrl-t': 'fuzzy-finder:toggle-file-finder'
+  # Unbind all the ctrl-w bindings so closing tabs can work normally
+  'ctrl-w': 'unset!'
+  'ctrl-w ctrl-h': 'unset!'
+  'ctrl-w h': 'unset!'
+  'ctrl-w left': 'unset!'
+  'ctrl-w ctrl-l': 'unset!'
+  'ctrl-w l': 'unset!'
+  'ctrl-w right': 'unset!'
+  'ctrl-w ctrl-k': 'unset!'
+  'ctrl-w k': 'unset!'
+  'ctrl-w up': 'unset!'
+  'ctrl-w ctrl-j': 'unset!'
+  'ctrl-w j': 'unset!'
+  'ctrl-w down': 'unset!'
+  'ctrl-w ctrl-w': 'unset!'
+  'ctrl-w w': 'unset!'
+  'ctrl-w ctrl-p': 'unset!'
+  'ctrl-w p': 'unset!'
+
+  'ctrl-w ctrl-x': 'unset!'
+  'ctrl-w x': 'unset!'
+
+  'ctrl-w K': 'unset!'
+  'ctrl-w J': 'unset!'
+  'ctrl-w H': 'unset!'
+  'ctrl-w L': 'unset!'
+
+  'ctrl-w ctrl-v': 'unset!'
+  'ctrl-w v': 'unset!'
+  'ctrl-w ctrl-s': 'unset!'
+  'ctrl-w s': 'unset!'
+
+  'ctrl-w z': 'unset!'
+  'ctrl-w Z': 'unset!'
+
+  'ctrl-w =': 'unset!'
+
+  'ctrl-w ctrl-c': 'unset!'
+  'ctrl-w c': 'unset!'
+  'ctrl-w ctrl-q': 'unset!'
+  'ctrl-w q': 'unset!'
+
+'atom-text-editor.vim-mode-plus:not(.normal-mode)':
+  'escape': 'vim-mode-plus:activate-normal-mode'
+
+'atom-text-editor.vim-mode-plus.insert-mode':
+  'ctrl-y': 'vim-mode-plus:copy-from-line-above'
+  'ctrl-r': 'vim-mode-plus:insert-register'
 
 # Make macros work with vim-mode-plus via
 # https://github.com/JunSuzukiJapan/atom-keyboard-macros-vim/issues/5#issuecomment-212849566

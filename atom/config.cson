@@ -32,7 +32,8 @@
     fontFamily: "Source Code Pro"
     fontSize: 16
     invisibles: {}
-  "elm-format": {}
+  "elm-format":
+    showErrorNotifications: false
   elmjutsu:
     autocompleteEnabled: true
     autocompleteMinChars: 2
@@ -53,7 +54,6 @@
     hidePanelWhenEmpty: false
     panelHeight: 107
     panelRepresents: "Entire Project"
-    showPanel: true
     showTooltip: false
   "prettier-atom":
     formatOnSaveOptions:
@@ -64,7 +64,9 @@
   "tree-view":
     hideVcsIgnoredFiles: true
   "vim-mode-plus":
+    incrementalSearch: true
     useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
   welcome:
     showOnStartup: false
 ".elm.source":
