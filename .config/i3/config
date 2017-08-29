@@ -5,11 +5,15 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+exec --no-startup-id feh --bg-scale /home/rtfeldman/dotfiles/wallpaper.png
+
 #exec xrandr -s 2560x1600
 
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+#client.background #333333
 
 set $mod Mod4
 set $editor alacritty
