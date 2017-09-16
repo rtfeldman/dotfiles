@@ -1,0 +1,10 @@
+general {
+        colors = true
+        interval = 5
+}
+
+order += "tztime local"
+
+tztime local {
+        format = "%A %b %d, %Y %I:%M%P"
+}
