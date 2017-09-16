@@ -111,3 +111,4 @@
 'atom-workspace':
   'cmd-escape': 'linter-ui-default:toggle-panel'
   'ctrl-escape': 'linter-ui-default:toggle-panel'
+  'ctrl-shift-o': 'advanced-open-file:toggle'

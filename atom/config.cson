@@ -1,4 +1,13 @@
 "*":
+  "atom-beautify":
+    elm:
+      beautify_on_save: true
+    general:
+      _analyticsUserId: "7267cae9-a74b-4247-be64-c28ef4cec7d6"
+      muteAllErrors: true
+      showLoadingView: false
+    rust:
+      beautify_on_save: true
   core:
     audioBeep: false
     autoHideMenuBar: true
@@ -6,6 +15,7 @@
     disabledPackages: [
       "vim-mode-plus-ex-mode"
       "deprecation-cop"
+      "elm-format"
     ]
     ignoredNames: [
       ".git"
@@ -52,9 +62,11 @@
   "linter-elm-make": {}
   "linter-ui-default":
     hidePanelWhenEmpty: false
-    panelHeight: 107
+    panelHeight: 124
     panelRepresents: "Entire Project"
     showTooltip: false
+  "merge-conflicts":
+    gitPath: "/run/current-system/sw/bin/git"
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
