@@ -38,16 +38,16 @@
   # };
 
   # Set your time zone.
-  time.timeZone = "US/New_York";
+  time.timeZone = "America/New_York";
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    wget
+    wget 
 
     gimp
 
-    i3 i3lock compton polybar
+    i3 i3lock compton
 
     git python gnumake
 
@@ -56,6 +56,8 @@
     zsh tmux xclip fzf ssh-ident
 
     binutils
+
+    mysql57
   ];
 
   environment.variables = {
@@ -101,10 +103,13 @@
 
   # Compton is a visual compositor. Without it, I can see screen tearing on fullscreen video or when scrolling quickly.
   services.compton.enable = true;
-  services.compton.vSync = "opengl-mswc";
+  services.compton.fade = false;
+  services.compton.shadow = false;
+  services.compton.backend = "glx";
+  services.compton.vSync = "opengl-swc";
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "17.03";
+  system.stateVersion = "17.09";
 
   boot.initrd.luks.devices = [
     {
@@ -114,6 +119,8 @@
     }
   ];
 
+  services.mysql.package = pkgs.mysql57;
+  services.mysql.enable = true;
 
   # networking.wireless.enable = true;
 

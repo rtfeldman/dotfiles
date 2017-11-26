@@ -3,7 +3,7 @@
     elm:
       beautify_on_save: true
     general:
-      _analyticsUserId: "7267cae9-a74b-4247-be64-c28ef4cec7d6"
+      _analyticsUserId: "c2bb4f9c-87b2-4627-b496-9f9d67976786"
       muteAllErrors: true
       showLoadingView: false
     rust:
@@ -73,10 +73,10 @@
       jsonScopes: [
         "none"
       ]
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   "vim-mode-plus":
     incrementalSearch: true
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
   welcome:
