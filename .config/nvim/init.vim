@@ -30,12 +30,6 @@ syntax enable
 
 set background=dark
 
-" let g:hybrid_custom_term_colors = 1
-" let g:hybrid_reduced_contrast = 1
-
-" colorscheme hybrid
-
-
 " ------- KEY BINDINGS -------
 
 map <Leader> <Plug>(easymotion-prefix)
@@ -69,6 +63,9 @@ set nowrap
 
 " show colorcolumn at 81+ characters
 let &colorcolumn=join(range(81,999),",")
+
+highlight ColorColumn ctermfg=0 ctermbg=8 cterm=none
+
 
 " don't show colorcolumn in quickfix
 autocmd FileType qf let &colorcolumn=""
