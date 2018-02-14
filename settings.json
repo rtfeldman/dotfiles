@@ -1,0 +1,29 @@
+{
+    "window.title": "${activeEditorMedium}",
+
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.colorCustomizations": 
+    {
+        "statusBar.background" : "#303030",
+        "statusBar.noFolderBackground" : "#222225",
+        "statusBar.debuggingBackground": "#511f1f"
+    },
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "solid",
+    
+    "[elm]": {
+        "editor.formatOnSave": true
+    },
+
+    "vim.useSystemClipboard": true,
+    "files.trimTrailingWhitespace": true,
+
+    "newFile.defaultFileExtension": ".elm",
+    "newFile.showPathRelativeTo": "project"
+}
