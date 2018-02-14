@@ -5,9 +5,8 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+exec --no-startup-id compton
 exec --no-startup-id feh --bg-scale /home/rtfeldman/dotfiles/wallpaper.png
-
-#exec xrandr -s 2560x1600
 
 # i3 config file (v4)
 #
@@ -46,17 +45,16 @@ floating_maximum_size 2048 x 1280
 floating_minimum_size 75 x 50
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec /nix/store/9qsripch0whyv3xyd656rcmkbs9f21d2-dmenu-4.6/bin/dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -173,6 +171,6 @@ bar {
   mode hide
 
   font pango:DejaVu Sans Mono, Icons 14
-  status_command /nix/store/5a0yzs0kfp5lglkn6wdqa547in08xlgh-i3status-2.11/bin/i3status
+  status_command i3status
 }
 
