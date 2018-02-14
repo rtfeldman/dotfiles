@@ -1,11 +1,28 @@
 "*":
   "atom-beautify":
+    css:
+      disabled: true
+    csv:
+      disabled: true
+    ejs:
+      disabled: true
     elm:
       beautify_on_save: true
     general:
-      _analyticsUserId: "c2bb4f9c-87b2-4627-b496-9f9d67976786"
+      _analyticsUserId: "4a103e58-562e-4e41-a655-4685e6c6970d"
+      loggerLevel: "error"
       muteAllErrors: true
+      muteUnsupportedLanguageErrors: true
       showLoadingView: false
+    haskell: {}
+    html:
+      disabled: true
+    js:
+      disabled: true
+    json:
+      disabled: true
+    jsx:
+      disabled: true
     rust:
       beautify_on_save: true
   core:
@@ -33,6 +50,7 @@
     packagesWithKeymapsDisabled: [
       "ex-mode"
       "linter-manager"
+      "atom-beautify"
     ]
     projectHome: "/Users/rtfeldman/code"
     telemetryConsent: "limited"
@@ -40,7 +58,7 @@
   editor:
     atomicSoftTabs: false
     fontFamily: "Source Code Pro"
-    fontSize: 16
+    fontSize: 15
     invisibles: {}
   "elm-format":
     showErrorNotifications: false
@@ -65,6 +83,9 @@
     panelHeight: 124
     panelRepresents: "Entire Project"
     showTooltip: false
+  "linter-rust":
+    cargoCommand: "check"
+    rustcPath: "/Users/rtfeldman/.cargo/bin/rustc"
   "merge-conflicts":
     gitPath: "/run/current-system/sw/bin/git"
   "prettier-atom":
@@ -73,7 +94,9 @@
       jsonScopes: [
         "none"
       ]
-  "tree-view": {}
+  rustfmt: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode-plus":
     incrementalSearch: true
     notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
