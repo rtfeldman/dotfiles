@@ -1,12 +1,13 @@
 {
     "window.title": "${activeEditorMedium}",
+    "window.menuBarVisibility": "toggle",
 
     "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorCustomizations": 
+    "workbench.colorCustomizations":
     {
         "statusBar.background" : "#303030",
         "statusBar.noFolderBackground" : "#222225",
@@ -16,7 +17,7 @@
     "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "editor.cursorBlinking": "solid",
-    
+
     "[elm]": {
         "editor.formatOnSave": true
     },
