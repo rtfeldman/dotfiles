@@ -34,6 +34,10 @@ highlight ColorColumn ctermfg=0 ctermbg=8 cterm=none
 " don't show colorcolumn in quickfix
 autocmd FileType qf let &colorcolumn=""
 
+" Ctrl+S saves from either insert mode or normal mode.
+map <C-s> :w<kEnter>
+imap <C-s> <Esc>:w<kEnter>i
+
 " -- HIGHLIGHTEDYANK PLUGIN --
 
 let g:highlightedyank_highlight_duration = 250
