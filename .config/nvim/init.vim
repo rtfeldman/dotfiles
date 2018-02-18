@@ -59,10 +59,12 @@ let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
       \   'right': [ [ 'gitbranch' ], [ 'readonly', 'modified', 'paste' ] ],
-      \   'left': [ [ 'filename'] ]
+      \   'left': [ [ 'filename'], [ 'ale' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
+      \   'ale': 'ALEGetStatusLine'
       \ }
 \ }
 
+let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
