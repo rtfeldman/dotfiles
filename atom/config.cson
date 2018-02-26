@@ -78,14 +78,14 @@
     lintOnChange: false
     lintPreviewTabs: false
   "linter-elm-make": {}
+  "linter-rust":
+    cargoCommand: "check"
+    rustcPath: "~/.cargo/bin/rustc"
   "linter-ui-default":
     hidePanelWhenEmpty: false
     panelHeight: 124
     panelRepresents: "Entire Project"
     showTooltip: false
-  "linter-rust":
-    cargoCommand: "check"
-    rustcPath: "/Users/rtfeldman/.cargo/bin/rustc"
   "merge-conflicts":
     gitPath: "/run/current-system/sw/bin/git"
   "prettier-atom":
@@ -99,7 +99,6 @@
     hideVcsIgnoredFiles: true
   "vim-mode-plus":
     incrementalSearch: true
-    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
   welcome:

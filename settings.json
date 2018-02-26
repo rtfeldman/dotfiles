@@ -23,7 +23,14 @@
     },
 
     "vim.useSystemClipboard": true,
+
     "files.trimTrailingWhitespace": true,
+
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/elm-stuff": true,
+        "**/bower_components": true
+    },
 
     "newFile.defaultFileExtension": ".elm",
     "newFile.showPathRelativeTo": "project"
