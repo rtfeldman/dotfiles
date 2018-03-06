@@ -80,3 +80,6 @@ let g:lightline = {
 \ }
 
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
+
+" Don't autoformat markdown
+let g:neoformat_enabled_markdown = []
