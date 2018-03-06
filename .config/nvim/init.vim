@@ -38,6 +38,14 @@ autocmd FileType qf let &colorcolumn=""
 map <C-s> :w<kEnter>
 imap <C-s> <Esc>:w<kEnter>i
 
+" Unbind vim-sneak (loaded by brangelina)
+silent! unmap s
+silent! unmap S
+
+" Ctrl-backspace deletes previous word
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+
 " -- HIGHLIGHTEDYANK PLUGIN --
 
 let g:highlightedyank_highlight_duration = 250
