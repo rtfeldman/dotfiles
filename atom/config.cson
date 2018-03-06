@@ -80,7 +80,6 @@
   "linter-elm-make": {}
   "linter-rust":
     cargoCommand: "check"
-    rustcPath: "~/.cargo/bin/rustc"
   "linter-ui-default":
     hidePanelWhenEmpty: false
     panelHeight: 124
