@@ -75,5 +75,8 @@ let g:lightline = {
 
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 
+" Have Ale only run on save
+let g:ale_lint_on_text_changed = 'never'
+
 " Don't autoformat markdown
 let g:neoformat_enabled_markdown = []
