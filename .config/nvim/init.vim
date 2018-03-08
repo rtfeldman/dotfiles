@@ -4,7 +4,6 @@ source ~/brangelina/brangelina.vim
 call plug#begin('~/.vim/plugged')
   call BrangelinaPlugins()
 
-  Plug 'easymotion/vim-easymotion'
   Plug 'joshdick/onedark.vim'
 call plug#end()
 
@@ -38,9 +37,8 @@ autocmd FileType qf let &colorcolumn=""
 map <C-s> :w<kEnter>
 imap <C-s> <Esc>:w<kEnter>i
 
-" Unbind vim-sneak (loaded by brangelina)
-silent! unmap s
-silent! unmap S
+" Enable vim-sneak labels
+let g:sneak#label = 1
 
 " Ctrl-backspace deletes previous word
 noremap! <C-BS> <C-w>
@@ -54,10 +52,6 @@ let g:highlightedyank_highlight_duration = 250
 
 " disable gitgutter by default
 let g:gitgutter_enabled = 0
-
-" -- EASYMOTION PLUGIN --
-
-map <Leader> <Plug>(easymotion-prefix)
 
 " -- MISC --
 
