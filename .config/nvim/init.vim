@@ -78,5 +78,9 @@ let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 " Have Ale only run on save
 let g:ale_lint_on_text_changed = 'never'
 
+" Next/Prev error bindings for Ale
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
 " Don't autoformat markdown
 let g:neoformat_enabled_markdown = []
