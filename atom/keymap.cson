@@ -105,8 +105,8 @@
   'm c': 'bookmarks:clear-bookmarks'
 
 'atom-text-editor':
-  'ctrl-n': 'linter-ui-default:next'
-  'ctrl-N': 'linter-ui-default:previous'
+  'ctrl-j': 'linter-ui-default:next'
+  'ctrl-k': 'linter-ui-default:previous'
 
 'atom-workspace':
   'cmd-escape': 'linter-ui-default:toggle-panel'
