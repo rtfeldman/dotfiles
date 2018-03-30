@@ -82,19 +82,5 @@ let g:ale_lint_on_text_changed = 'never'
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-" Use :GFiles for ctrl+p by default. Fall back on :Files if not in a git repo.
-function! GFilesFallback()
-  let output = system('git rev-parse --show-toplevel') " Is there a faster way?
-  let prefix = get(g:, 'fzf_command_prefix', '')
-  if v:shell_error == 0
-    exec "normal :" . prefix . "GFiles\<CR>"
-  else
-    exec "normal :" . prefix . "Files\<CR>"
-  endif
-  return 0
-endfunction
-
-nnoremap <c-p> :call GFilesFallback()<CR>
-
 " Don't autoformat markdown
 let g:neoformat_enabled_markdown = []
