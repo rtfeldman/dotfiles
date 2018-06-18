@@ -1,11 +1,13 @@
 source ~/brangelina/brangelina.vim
 
-
 call plug#begin('~/.vim/plugged')
   call BrangelinaPlugins()
 
+  Plug 'terryma/vim-multiple-cursors' " Stöffel's favorite! ;)
+
   Plug 'joshdick/onedark.vim'
 call plug#end()
+
 
 " -- THEME --
 set background=dark
@@ -32,6 +34,19 @@ highlight ColorColumn ctermfg=0 ctermbg=8 cterm=none
 
 " don't show colorcolumn in quickfix
 autocmd FileType qf let &colorcolumn=""
+
+" Let me go back to normal mode without exiting multi-cursor mode
+let g:multi_cursor_exit_from_insert_mode = 1
+
+" -- Begin fix for https://github.com/Shougo/deoplete.nvim/issues/265 --
+function! Multiple_cursors_before()
+  let g:deoplete#disable_auto_complete = 1
+endfunction
+
+function! Multiple_cursors_after()
+  let g:deoplete#disable_auto_complete = 0
+endfunction
+" -- End fix --
 
 " Ctrl+S saves from either insert mode or normal mode.
 map <C-s> :w<kEnter>
