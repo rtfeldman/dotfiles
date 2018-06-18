@@ -2,7 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"0_package_control_loader"
 	],
 	"installed_packages":
 	[
@@ -14,8 +13,9 @@
 		"CoffeeScriptHaml",
 		"Elm Language Support",
 		"Git",
-		"Markdown Preview",
+		"MarkdownPreview",
 		"Material Theme",
+		"NeoVintageous",
 		"Oceanic Color Scheme",
 		"Oceanic Next Color Scheme",
 		"Package Control",
@@ -35,8 +35,7 @@
 		"Theme - Autumn",
 		"Theme - Sodarized",
 		"Trailing Punctuation",
-		"VAlign",
-		"Vintageous"
+		"VAlign"
 	],
 	"repositories":
 	[

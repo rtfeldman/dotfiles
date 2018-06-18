@@ -29,10 +29,13 @@
 		"log",
 		"elm-stuff"
 	],
-	"font_size": 23,
+	"font_face": "Source Code Pro",
+	"font_size": 19,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Six",
+		"Vintage",
+		"Vintageous"
 	],
 	"rulers":
 	[

@@ -58,7 +58,6 @@
   editor:
     atomicSoftTabs: false
     fontFamily: "Source Code Pro"
-    fontSize: 15
     invisibles: {}
   "elm-format":
     showErrorNotifications: false
@@ -82,7 +81,7 @@
     cargoCommand: "check"
   "linter-ui-default":
     hidePanelWhenEmpty: false
-    panelHeight: 124
+    panelHeight: 267
     panelRepresents: "Entire Project"
     showTooltip: false
   "merge-conflicts":
