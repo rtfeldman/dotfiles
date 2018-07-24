@@ -1,7 +1,7 @@
 {
 	"auto_match_enabled": false,
 	"caret_style": "solid",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -30,7 +30,7 @@
 		"elm-stuff"
 	],
 	"font_face": "Source Code Pro",
-	"font_size": 19,
+	"font_size": 13,
 	"ignored_packages":
 	[
 		"Six",
@@ -44,7 +44,7 @@
 	"save_on_focus_lost": false,
 	"show_full_path": true,
 	"tab_size": 2,
-	"theme": "Material-Theme.sublime-theme",
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,

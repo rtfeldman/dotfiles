@@ -23,6 +23,8 @@
     },
 
     "vim.useSystemClipboard": true,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "nvim",
 
     "files.trimTrailingWhitespace": true,
 
