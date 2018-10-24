@@ -1,11 +1,10 @@
-source ~/brangelina/brangelina.vim
+source ~/whimsical-vim/whimsical.vim
 
 
 call plug#begin('~/.vim/plugged')
-  call BrangelinaPlugins()
+  call WhimsicalPlugins()
 
   Plug 'joshdick/onedark.vim'
-  Plug 'mg979/vim-visual-multi' " Stöffel's favorite! ;)
 call plug#end()
 
 " -- THEME --
@@ -85,3 +84,8 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Don't autoformat markdown
 let g:neoformat_enabled_markdown = []
+
+" Use ripgrep
+set grepprg=rg\ --color=never
+let g:ctrlp_user_command = 'rg %s --color=never --files --hidden --follow --glob "!.git/*"'
+let g:ctrlp_use_caching = 0

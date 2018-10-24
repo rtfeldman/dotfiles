@@ -5,7 +5,7 @@
 	editor = nvim
 	excludesfile = ~/.gitignore
 [web]
-	browser = google-chrome
+	browser = firefox
 [push]
 	default = simple
 [color]

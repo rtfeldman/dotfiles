@@ -23,6 +23,9 @@
     },
 
     "vim.useSystemClipboard": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
     "vim.enableNeovim": true,
     "vim.neovimPath": "nvim",
 
@@ -35,5 +38,6 @@
     },
 
     "newFile.defaultFileExtension": ".elm",
-    "newFile.showPathRelativeTo": "project"
+    "newFile.showPathRelativeTo": "project",
+    "window.zoomLevel": 2
 }
