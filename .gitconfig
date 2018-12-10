@@ -179,6 +179,10 @@
 	human = name-rev --name-only --refs=refs/heads/*
 	serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+	#############
+  current = rev-parse --abbrev-ref HEAD
+  publish = "!git push -u origin `git current`"
+  dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

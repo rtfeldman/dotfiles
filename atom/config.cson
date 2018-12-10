@@ -32,7 +32,8 @@
     disabledPackages: [
       "vim-mode-plus-ex-mode"
       "deprecation-cop"
-      "elm-format"
+      "elmjutsu"
+      "linter-elm-make"
     ]
     ignoredNames: [
       ".git"
@@ -54,10 +55,15 @@
     ]
     projectHome: "/Users/rtfeldman/code"
     telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "atom-dark-syntax"
+    ]
     titleBar: "hidden"
   editor:
     atomicSoftTabs: false
     fontFamily: "Source Code Pro"
+    fontSize: 28
     invisibles: {}
   "elm-format":
     showErrorNotifications: false
@@ -76,7 +82,8 @@
   linter:
     lintOnChange: false
     lintPreviewTabs: false
-  "linter-elm-make": {}
+  "linter-elm-make":
+    elmMakeExecutablePath: "elm make"
   "linter-rust":
     cargoCommand: "check"
   "linter-ui-default":
