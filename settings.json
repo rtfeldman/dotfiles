@@ -2,7 +2,7 @@
     "window.title": "${activeEditorMedium}",
     "window.menuBarVisibility": "toggle",
 
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Night Owl (No Italics)",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
@@ -13,12 +13,15 @@
         "statusBar.noFolderBackground" : "#222225",
         "statusBar.debuggingBackground": "#511f1f"
     },
-    "editor.fontSize": 15,
-    "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Inconsolata'",
     "editor.minimap.enabled": false,
     "editor.cursorBlinking": "solid",
+    "editor.renderIndentGuides": false,
 
     "[elm]": {
+        "elm.disableLinting": true,
+        "elm.makeCommand": "./node_modules/.bin/elm-make",
         "editor.formatOnSave": true
     },
 
@@ -27,7 +30,21 @@
     "vim.incsearch": true,
     "vim.hlsearch": true,
     "vim.enableNeovim": true,
-    "vim.neovimPath": "nvim",
+    "vim.useCtrlKeys": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["<C-r>"],
+            "commands": ["redo"]
+        }
+    ],
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(96, 120, 128, 0.5)",
+    "vim.highlightedyank.duration": 100,
 
     "files.trimTrailingWhitespace": true,
 
@@ -37,7 +54,19 @@
         "**/bower_components": true
     },
 
+    "rust-client.channel": "stable",
+    "rust-analyzer.enableCargoWatchOnStartup": "enabled",
+
     "newFile.defaultFileExtension": ".elm",
     "newFile.showPathRelativeTo": "project",
-    "window.zoomLevel": 4
+    "window.zoomLevel": 2,
+    "terminal.integrated.fontSize": 16,
+    "terminal.external.linuxExec": "zsh",
+    "terminal.integrated.fontFamily": "'Source Code Pro'",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.statusBar.feedback.visible": false,
+    "files.associations": {
+        "*.roc": "coffeescript"
+    },
+    "breadcrumbs.enabled": false
 }
