@@ -4,6 +4,9 @@ export PATH=$HOME/.node_modules/bin:$PATH
 # npm global modules
 export PATH=$HOME/.npm-global/bin:$PATH
 
+# openresty
+export PATH=/usr/local/openresty/nginx/sbin:/usr/local/openresty/bin:$PATH
+
 # Rust crates
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -41,3 +44,6 @@ source $HOME/.aws/.zshrc
 source $HOME/.nix-profile/etc/profile.d/nix.sh
 
 eval "$(direnv hook zsh)"
+export LUA_PATH='/home/rtfeldman/.luarocks/share/lua/5.1/?.lua;/home/rtfeldman/.luarocks/share/lua/5.1/?/init.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua;./?.lua;/usr/local/lib/lua/5.1/?.lua;/usr/local/lib/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua'
+export LUA_CPATH='/home/rtfeldman/.luarocks/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/?.so;./?.so;/usr/lib/x86_64-linux-gnu/lua/5.1/?.so;/usr/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/loadall.so'
+fpath+=${ZDOTDIR:-~}/.zsh_functions
