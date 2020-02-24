@@ -1,6 +1,6 @@
 [user]
 	name = Richard Feldman
-	email = richard.t.feldman@gmail.com
+	email = oss@rtfeldman.com
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore

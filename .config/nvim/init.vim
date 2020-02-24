@@ -5,6 +5,8 @@ call plug#begin('~/.vim/plugged')
   call WhimsicalPlugins()
 
   Plug 'joshdick/onedark.vim'
+  Plug 'ycm-core/YouCompleteMe'
+  Plug 'zxqfl/tabnine-vim'
 call plug#end()
 
 " -- THEME --
@@ -89,3 +91,21 @@ let g:neoformat_enabled_markdown = []
 set grepprg=rg\ --color=never
 let g:ctrlp_user_command = 'rg %s --color=never --files --hidden --follow --glob "!.git/*"'
 let g:ctrlp_use_caching = 0
+
+" Set .roc syntax highlighting to use coffeescript syntax highlighting for now.
+autocmd BufNewFile,BufRead,BufWrite *.roc set syntax=coffee
+
+" Trim trailing whitespace
+fun! TrimWhitespace()
+  " Trailing whitespace has meaning in markdown files.
+  if &filetype!='markdown'
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+  endif
+endfun
+
+" Clear highlight on esc
+nnoremap <esc> :noh<return><esc>
+
+autocmd BufWritePre * :call TrimWhitespace()
