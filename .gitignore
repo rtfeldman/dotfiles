@@ -4,3 +4,4 @@ atom/compile-cache
 atom/.node-gyp
 atom/blob-store
 atom/.apm
+.config/nvim/.netrwhist
