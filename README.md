@@ -79,3 +79,7 @@ Install iTerm2, then from within this repo's directory:
 3. Add a custom modifier for Cmd+S that has it send
 hex code 0x13 (Ctrl-S, which nvim will then use to Save).
 4. Do the same for Cmd+O and 0x10 (Ctrl-P).
+
+## Fresh Linux setup
+
+1. Get [color emoji](https://victor.kropp.name/blog/emoji-on-linux/)
