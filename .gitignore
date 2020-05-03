@@ -5,3 +5,4 @@ atom/.node-gyp
 atom/blob-store
 atom/.apm
 .config/nvim/.netrwhist
+.config/kitty/kitty-local.conf
