@@ -194,3 +194,5 @@ command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 let g:ale_linters = {
 \   'elm': ['make'],
 \}
+
+set viminfo='100,n$HOME/.vim/files/info/viminfo
