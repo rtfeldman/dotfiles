@@ -88,9 +88,9 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:neoformat_enabled_markdown = []
 
 " Use ripgrep
-set grepprg=rg\ --color=never
-let g:ctrlp_user_command = 'rg %s --color=never --files --hidden --follow --glob "!.git/*"'
-let g:ctrlp_use_caching = 0
+"set grepprg=rg\ --color=never
+"let g:ctrlp_user_command = 'rg %s --color=never --files --hidden --follow --glob "!.git/*"'
+"let g:ctrlp_use_caching = 0
 
 " Set .roc syntax highlighting to use coffeescript syntax highlighting for now.
 autocmd BufNewFile,BufRead,BufWrite *.roc set syntax=coffee
