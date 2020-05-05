@@ -119,7 +119,21 @@ call plug#begin('~/.vim/plugged')
   Plug 'bling/vim-bufferline' " show buffers in command line
   Plug 'vim-airline/vim-airline' " status line replacement
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'skywind3000/vim-auto-popmenu' " lightweight autocompletion
+  Plug 'skywind3000/vim-dict' " autocompletion dictionary for several languages
 call plug#end()
+
+" enable vim-auto-popmenu plugin for filetypes, '*' for all files.
+let g:apc_enable_ft = {'*':1}
+
+" source for dictionary, current or other loaded buffers, see ':help cpt'
+set cpt=.,k,w,b
+
+" don't select the first item.
+set completeopt=menu,menuone,noselect
+
+" suppress annoying messages.
+set shortmess+=c
 
 " Use this theme:
 colo onedark
