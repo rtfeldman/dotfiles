@@ -41,3 +41,6 @@ source $HOME/.aws/.zshrc
 source $HOME/.nix-profile/etc/profile.d/nix.sh
 
 eval "$(direnv hook zsh)"
+
+# Pass through Ctrl-S to programs (e.g. vim)
+stty -ixon
