@@ -1,5 +1,5 @@
 (setq user-full-name "Richard Feldman")
-(setq user-mail-address "richard.t.feldman@gmail.com")
+(setq user-mail-address "oss@rtfeldman.com")
 
 (add-to-list 'load-path (expand-file-name "submodules" user-emacs-directory))
 
