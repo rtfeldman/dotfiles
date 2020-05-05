@@ -33,8 +33,6 @@ let g:ale_elm_make_use_global=1
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
-let g:elm_format_autosave = 0
-let g:elm_make_show_warnings = 1
 let g:elm_setup_keybindings = 0
 let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
 let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
@@ -46,15 +44,22 @@ let g:better_whitespace_enabled=0 " don't highlight trailing spaces by default
 let g:strip_whitespace_on_save=1 " trim trailing space on save by default
 let g:strip_whitespace_confirm=0 " don't confirm before trimming trailing spaces
 let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='atomic' " nice with almost all colorschemes
 
 if !isdirectory(expand(&undodir))
    call mkdir(expand(&undodir), 'p')
 endif
 
-" global search
-nnoremap <C-S> :Rg <C-R><C-W><CR>
-vnoremap <C-S> "yy<esc>:Rg <C-R>y<CR>
+" Show errors on \E
+nnoremap <leader>e :ALEDetail<cr>
+
+" Save on \S
+nnoremap <leader>s :w<cr>
+
+" Ctrl+S saves from either insert mode or normal mode.
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>a
 
 " Perform fuzzy file searching
 nnoremap <C-P> mN:Files<cr>
@@ -105,7 +110,7 @@ augroup END
 call plug#begin('~/.vim/plugged')
   Plug 'joshdick/onedark.vim'
   Plug 'ntpeters/vim-better-whitespace' " trim trailing whitespace
-  Plug 'w0rp/ale' " Asynchronous linter
+  Plug 'dense-analysis/ale' " Asynchronous linter
   Plug 'haya14busa/incsearch.vim' " Improved incremental searching
   Plug 'machakann/vim-highlightedyank' " highlighted yank
   Plug 'mhinz/vim-startify' " startup page
@@ -121,6 +126,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'skywind3000/vim-auto-popmenu' " lightweight autocompletion
   Plug 'skywind3000/vim-dict' " autocompletion dictionary for several languages
+  Plug 'ElmCast/elm-vim' " elm-format autosave, syntax highlighting, etc
 call plug#end()
 
 " enable vim-auto-popmenu plugin for filetypes, '*' for all files.
@@ -150,10 +156,6 @@ highlight ColorColumn ctermfg=0 ctermbg=8 cterm=none
 
 " don't show colorcolumn in quickfix
 autocmd FileType qf let &colorcolumn=""
-
-" Ctrl+S saves from either insert mode or normal mode.
-map <C-s> :w<kEnter>
-imap <C-s> <Esc>:w<kEnter>i
 
 " Enable vim-sneak labels
 let g:sneak#label = 1
@@ -187,3 +189,8 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
+
+" In ~/.vim/vimrc, or somewhere similar.
+let g:ale_linters = {
+\   'elm': ['make'],
+\}
