@@ -1,179 +1,175 @@
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
-
-call pathogen#infect()
-
-" don't clutter up the current directory with backups and swap files.
-set backupdir=~/.vim/tmp
-set directory=~/.vim/tmp
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-" Smart indentation with tabs being 2 spaces
-set smartindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-" Line numbers!
-set number
-
-" ignore case when searching, except when searching for caps, in which case
-" don't ignore case.
-set ignorecase
-set smartcase
-
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-set colorcolumn=110 " show a vertical line at 110 chars
-
-" Press Space to turn off highlighting and clear any message already displayed.
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
-
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
-
-" Wild ignores
-set wildignore+=*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.gif,*.bmp,*.tif,*.tiff,*.mpg,*.mpeg,*.psd
-
-" Specific ignores for Command-T
-let g:CommandTWildIgnore=&wildignore . ",dist/**,node_modules/**,public/assets,tmp/**"
-let g:CommandTFileScanner = 'find'
-
+" Global settings
+filetype plugin indent on
 syntax on
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  set encoding=utf-8
-  set hlsearch
+:scriptencoding utf-8
+let &showbreak = '↪ '
+set clipboard^=unnamed,unnamedplus
+set completefunc=emoji#complete
+set completeopt+=longest
+set completeopt-=preview
+set cursorline
+set expandtab
+set hidden
+set mouse=a
+set noswapfile
+set number
+set path=**
+set shiftround
+set shiftwidth=2
 
-  let g:solarized_termcolors=256
-  set background=dark
-  colorscheme solarized
+set splitright
+set tabstop=2
+set termguicolors
+set ttyfast " removed in nvim
+set undodir=~/tmp/vim/undo
+set undofile
+set wildignorecase
+set noruler " Don't show the line or character count in the cmdline.
 
-  if has("gui_macvim")
-    set guifont=Source\ Code\ Pro\ for\ Powerline:h18
-  else
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ 14
-  endif
+" # Plugin configuration
+let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
+let g:ale_elm_make_use_global=1
+let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '!'
+let g:elm_format_autosave = 0
+let g:elm_make_show_warnings = 1
+let g:elm_setup_keybindings = 0
+let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
+let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
+let g:netrw_liststyle=1
+let g:polyglot_disabled = ['haskell']
+let g:startify_change_to_vcs_root = 1
+let g:startify_session_delete_buffers = 1
+let g:better_whitespace_enabled=0 " don't highlight trailing spaces by default
+let g:strip_whitespace_on_save=1 " trim trailing space on save by default
+let g:strip_whitespace_confirm=0 " don't confirm before trimming trailing spaces
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline_theme='atomic' " nice with almost all colorschemes
 
-  " Remove the menus and toolbar
-  set guioptions-=T
-  set guioptions-=m
-
-  let g:Powerline_symbols = 'fancy'
-  let g:airline_powerline_fonts = 1
-
-  " Make Ctrl-S work in Insert mode
-  noremap <silent> <C-S>          :update<CR>
-  vnoremap <silent> <C-S>         <C-C>:update<CR>
-  inoremap <silent> <C-S>         <C-O>:update<CR>
+if !isdirectory(expand(&undodir))
+   call mkdir(expand(&undodir), 'p')
 endif
 
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
+" global search
+nnoremap <C-S> :Rg <C-R><C-W><CR>
+vnoremap <C-S> "yy<esc>:Rg <C-R>y<CR>
 
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
+" Perform fuzzy file searching
+nnoremap <C-P> mN:Files<cr>
+nnoremap <C-B> mN:Buffers<CR>
+nnoremap <C-/> mN:Lines<cr>
+nnoremap <leader><leader> mN:Commands<cr>
+nnoremap <leader>/ mN:History/<cr>
+nnoremap <leader>: mN:History:<cr>
+nnoremap <leader>? mN:Helptags<cr>
 
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+" Terminal mappings
+nnoremap <silent> <C-T> :<c-u>exec v:count.'Ttoggle'<cr>
+tnoremap <silent> <C-T> <C-\><C-n>:<c-u>exec v:count.'Ttoggle'<cr>
+tnoremap <C-[> <C-\><C-n>
+tnoremap <C-O> <C-\><C-n>`N
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+" Hightlight all incremental search results
+map /  <plug>(incsearch-forward)
+map ?  <plug>(incsearch-backward)
+map g/ <plug>(incsearch-stay)
 
-  augroup END
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
-  " .hamlc syntax highlighting
-  au BufRead,BufNewFile *.hamlc set ft=haml
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
-" See https://github.com/lukaszkorecki/CoffeeTags
-" (remember to gem install CoffeeTags when installing on a new system!)
-if executable('coffeetags')
-  let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '',
-        \ 'kinds' : [
-        \ 'f:functions',
-        \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-        \ 'f' : 'object',
-        \ 'o' : 'object',
-        \ }
-        \ }
-endif
-
-" Bring up the Tagbar - http://majutsushi.github.io/tagbar/
-nmap <F6> :TagbarToggle<CR>
-
-" mkdir -p on save when editing a file in a directory that doesn't exist yet
-function s:MkNonExDir(file, buf)
-  if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
-    let dir=fnamemodify(a:file, ':h')
-    if !isdirectory(dir)
-      call mkdir(dir, 'p')
-    endif
-  endif
-endfunction
-
-augroup BWCCreateDir
+" # Autocmds
+augroup customCommands
+  autocmd FileType elm set tabstop=4
+  autocmd FileType elm set shiftwidth=4
+  autocmd FileType roc set tabstop=4
+  autocmd FileType roc set shiftwidth=4
   autocmd!
-  autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
 
-let g:syntastic_haskell_checkers = ['hdevtools']
-let g:syntastic_coffeescript_checkers = ['coffee']
-let g:syntastic_ruby_checkers = ['mri']
+" " # Use ripgrep for ctrlp
+" set grepprg=rg\ --color=never
+" let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+" let g:ctrlp_use_caching = 0
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+  Plug 'joshdick/onedark.vim'
+  Plug 'ntpeters/vim-better-whitespace' " trim trailing whitespace
+  Plug 'w0rp/ale' " Asynchronous linter
+  Plug 'haya14busa/incsearch.vim' " Improved incremental searching
+  Plug 'machakann/vim-highlightedyank' " highlighted yank
+  Plug 'mhinz/vim-startify' " startup page
+  Plug 'bronson/vim-visual-star-search' " select text, then press * or # to search for it
+  Plug 'tpope/vim-commentary' " (Un)commenting lines
+  Plug 'tpope/vim-repeat' " Use dot operator with plugins
+  Plug 'tpope/vim-sensible' " Defaults everyone can agree on
+  Plug 'tpope/vim-surround' " Commands to work with surroundings
+  Plug 'junegunn/fzf' " fuzzy finder for files/buffers/etc
+  Plug 'junegunn/fzf.vim' " vim plugin for fzf
+  Plug 'bling/vim-bufferline' " show buffers in command line
+  Plug 'vim-airline/vim-airline' " status line replacement
+  Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+" Use this theme:
+colo onedark
+
+" Don't show the mode (e.g. --INSERT--) - I know what mode I'm in!
+set noshowmode
+
+" Don't show keystrokes in the status bar
+set noshowcmd
+
+" show colorcolumn at 81+ characters
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermfg=0 ctermbg=8 cterm=none
+
+" don't show colorcolumn in quickfix
+autocmd FileType qf let &colorcolumn=""
+
+" Ctrl+S saves from either insert mode or normal mode.
+map <C-s> :w<kEnter>
+imap <C-s> <Esc>:w<kEnter>i
+
+" Enable vim-sneak labels
+let g:sneak#label = 1
+
+" Ctrl-backspace deletes previous word
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+
+" HIGHLIGHTEDYANK PLUGIN
+let g:highlightedyank_highlight_duration = 250
+
+let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
+
+" Have Ale only run on save
+let g:ale_lint_on_text_changed = 'never'
+
+" Next/Prev error bindings for Ale
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" # Commands
+command! ReloadConfig execute "source ~/.vimrc"
+
+" Rg search via FZF - taken from https://github.com/junegunn/fzf.vim/blob/25bed070d83c6a230da371336829092a715edd07/README.md
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
