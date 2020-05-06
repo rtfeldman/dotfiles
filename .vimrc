@@ -208,4 +208,7 @@ if &term =~ "xterm"
 endif
 
 " Without this, there's a delay when changing to/from the insert mode caret
+set ttimeout
+set ttimeoutlen=1
+set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set ttyfast
