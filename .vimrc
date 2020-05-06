@@ -31,7 +31,7 @@ set noruler " Don't show the line or character count in the cmdline.
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:ale_fix_on_save = 1
 let g:ale_elm_make_use_global=1
-let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
+let g:ale_lint_delay = 0
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:elm_setup_keybindings = 0
@@ -42,9 +42,6 @@ let g:netrw_liststyle=1
 let g:polyglot_disabled = ['haskell']
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_delete_buffers = 1
-let g:better_whitespace_enabled=0 " don't highlight trailing spaces by default
-let g:strip_whitespace_on_save=1 " trim trailing space on save by default
-let g:strip_whitespace_confirm=0 " don't confirm before trimming trailing spaces
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='atomic' " nice with almost all colorschemes
@@ -111,7 +108,6 @@ augroup END
 " Plugins
 call plug#begin('~/.vim/plugged')
   Plug 'joshdick/onedark.vim'
-  Plug 'ntpeters/vim-better-whitespace' " trim trailing whitespace
   Plug 'dense-analysis/ale' " Asynchronous linter
   Plug 'haya14busa/incsearch.vim' " Improved incremental searching
   Plug 'machakann/vim-highlightedyank' " highlighted yank
@@ -192,9 +188,12 @@ command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 " In ~/.vim/vimrc, or somewhere similar.
 let g:ale_linters = {
 \   'elm': ['make'],
+\   'haskell': ['hlint', 'hdevtools']
 \}
 
 let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'markdown': ['remove_trailing_lines'],
 \   'rust': ['rustfmt'],
 \}
 
