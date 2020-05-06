@@ -60,8 +60,8 @@ nnoremap <leader>e :ALEDetail<cr>
 nnoremap <leader>s :w<cr>
 
 " Ctrl+S saves from either insert mode or normal mode.
-:nmap <c-s> :w<CR>
-:imap <c-s> <Esc>:w<CR>a
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
 
 " Perform fuzzy file searching
 nnoremap <C-P> mN:Files<cr>
@@ -146,9 +146,6 @@ set shortmess+=c
 " Use this theme:
 colo onedark
 
-" Don't show the mode (e.g. --INSERT--) - I know what mode I'm in!
-set noshowmode
-
 " Don't show keystrokes in the status bar
 set noshowcmd
 
@@ -202,3 +199,13 @@ let g:ale_fixers = {
 \}
 
 set viminfo='100,n$HOME/.vim/files/info/viminfo
+
+if &term =~ "xterm"
+  " normal mode caret: solid vertical block
+  let &t_SI .= "\<Esc>[6 q"
+  " insert mode caret: solid vertical var
+  let &t_EI .= "\<Esc>[2 q"
+endif
+
+" Without this, there's a delay when changing to/from the insert mode caret
+set ttyfast
