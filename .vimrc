@@ -29,11 +29,13 @@ set noruler " Don't show the line or character count in the cmdline.
 
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
+let g:ale_fix_on_save = 1
 let g:ale_elm_make_use_global=1
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:elm_setup_keybindings = 0
+let g:ale_rust_cargo_check_tests = 1
 let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
 let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
 let g:netrw_liststyle=1
@@ -193,6 +195,10 @@ command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 " In ~/.vim/vimrc, or somewhere similar.
 let g:ale_linters = {
 \   'elm': ['make'],
+\}
+
+let g:ale_fixers = {
+\   'rust': ['rustfmt'],
 \}
 
 set viminfo='100,n$HOME/.vim/files/info/viminfo
