@@ -21,7 +21,9 @@ export EDITOR='vim'
 alias npmtest='npm test --ignore-scripts=false'
 alias npmrun='npm run --ignore-scripts=false'
 
-eval "$(direnv hook zsh)"
+if [ -x "$(command -v direnv)" ]; then
+  eval "$(direnv hook zsh)"
+fi
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
