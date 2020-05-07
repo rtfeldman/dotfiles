@@ -2,7 +2,7 @@
 	name = Richard Feldman
 	email = oss@rtfeldman.com
 [core]
-	editor = nvim
+	editor = vim
 	excludesfile = ~/.gitignore
 [web]
 	browser = firefox
