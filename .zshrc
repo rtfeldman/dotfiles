@@ -25,7 +25,10 @@ if [ -x "$(command -v direnv)" ]; then
   eval "$(direnv hook zsh)"
 fi
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+# --files: List files that would be searched but do not search
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 # Pass through Ctrl-S to applications (e.g.vim)
 stty -ixon
