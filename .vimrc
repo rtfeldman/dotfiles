@@ -39,7 +39,7 @@ let g:ale_rust_cargo_check_tests = 1
 let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
 let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
 let g:netrw_liststyle=1
-let g:polyglot_disabled = ['haskell']
+let g:polyglot_disabled = ['haskell', 'elm']
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_delete_buffers = 1
 let g:airline#extensions#bufferline#enabled = 1
@@ -119,7 +119,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'skywind3000/vim-auto-popmenu' " lightweight autocompletion
   Plug 'skywind3000/vim-dict' " autocompletion dictionary for several languages
-  Plug 'ElmCast/elm-vim' " elm-format autosave, syntax highlighting, etc
+  Plug 'ElmCast/elm-vim' " elm-format on autosave
+  Plug 'sheerun/vim-polyglot' " syntax highlighting for lots of things
 call plug#end()
 
 " enable vim-auto-popmenu plugin for filetypes, '*' for all files.
