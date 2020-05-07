@@ -100,11 +100,6 @@ augroup customCommands
   autocmd!
 augroup END
 
-" " # Use ripgrep for ctrlp
-" set grepprg=rg\ --color=never
-" let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-" let g:ctrlp_use_caching = 0
-
 " Plugins
 call plug#begin('~/.vim/plugged')
   Plug 'joshdick/onedark.vim'
