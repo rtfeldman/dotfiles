@@ -119,6 +119,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'skywind3000/vim-dict' " autocompletion dictionary for several languages
   Plug 'ElmCast/elm-vim' " elm-format on autosave
   Plug 'sheerun/vim-polyglot' " syntax highlighting for lots of things
+  Plug 'danro/rename.vim' " adds :Rename command
 call plug#end()
 
 " enable vim-auto-popmenu plugin for filetypes, '*' for all files.
