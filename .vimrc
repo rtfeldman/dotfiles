@@ -42,7 +42,6 @@ let g:netrw_liststyle=1
 let g:polyglot_disabled = ['haskell', 'elm']
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_delete_buffers = 1
-let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='atomic' " nice with almost all colorschemes
 
@@ -114,7 +113,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround' " Commands to work with surroundings
   Plug 'junegunn/fzf' " fuzzy finder for files/buffers/etc
   Plug 'junegunn/fzf.vim' " vim plugin for fzf
-  Plug 'bling/vim-bufferline' " show buffers in command line
   Plug 'vim-airline/vim-airline' " status line replacement
   Plug 'vim-airline/vim-airline-themes'
   Plug 'skywind3000/vim-auto-popmenu' " lightweight autocompletion
