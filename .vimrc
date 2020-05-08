@@ -170,15 +170,11 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 command! ReloadConfig execute "source ~/.vimrc"
 
 " Rg search via FZF - taken from https://github.com/junegunn/fzf.vim/blob/25bed070d83c6a230da371336829092a715edd07/README.md
-function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
-  let initial_command = printf(command_fmt, shellescape(a:query))
-  let reload_command = printf(command_fmt, '{q}')
-  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
-  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
-endfunction
-
-command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --hidden --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1,
+  \   { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' },
+  \   <bang>0)
 
 " In ~/.vim/vimrc, or somewhere similar.
 let g:ale_linters = {
