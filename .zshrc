@@ -32,3 +32,6 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 # Pass through Ctrl-S to applications (e.g.vim)
 stty -ixon
+
+# Install FZF completions, if available
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
