@@ -7,7 +7,7 @@
 [web]
 	browser = firefox
 [push]
-	default = simple
+	default = current
 [color]
 	ui = auto
 [color "branch"]
