@@ -20,6 +20,7 @@ export EDITOR='vim'
 
 alias npmtest='npm test --ignore-scripts=false'
 alias npmrun='npm run --ignore-scripts=false'
+alias cls='tput reset' # https://askubuntu.com/a/25079
 
 if [ -x "$(command -v direnv)" ]; then
   eval "$(direnv hook zsh)"
