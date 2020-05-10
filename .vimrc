@@ -55,6 +55,9 @@ nnoremap <leader>e :ALEDetail<cr>
 " Save on \S
 nnoremap <leader>s :w<cr>
 
+" Quit on \Q
+nnoremap <leader>q :q<cr>
+
 " Ctrl+S saves from either insert mode or normal mode.
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
