@@ -175,7 +175,7 @@ command! ReloadConfig execute "source ~/.vimrc"
 " Rg search via FZF - taken from https://github.com/junegunn/fzf.vim/blob/25bed070d83c6a230da371336829092a715edd07/README.md
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --hidden --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1,
+  \   'rg --hidden --column --line-number --no-heading --glob "!.git/*" --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1,
   \   { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' },
   \   <bang>0)
 
