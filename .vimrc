@@ -40,14 +40,14 @@ let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:elm_setup_keybindings = 0
 let g:ale_rust_cargo_check_tests = 1
-let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
-let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
+let g:haskell_indent_disable=1 " Automatic indenting and hindent don't agree
+let g:localvimrc_persistent=2 " See plugin: embear/vim-localvimrc
 let g:netrw_liststyle=1
 let g:polyglot_disabled = ['haskell', 'elm']
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_delete_buffers = 1
 let g:airline#extensions#ale#enabled = 1
-let g:airline_theme='atomic' " nice with almost all colorschemes
+let g:airline_theme='one'
 
 if !isdirectory(expand(&undodir))
    call mkdir(expand(&undodir), 'p')
@@ -108,7 +108,7 @@ augroup END
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-  Plug 'joshdick/onedark.vim'
+  Plug 'rakr/vim-one' " theme (includes both One Dark and One Light)
   Plug 'dense-analysis/ale' " Asynchronous linter
   Plug 'haya14busa/incsearch.vim' " Improved incremental searching
   Plug 'machakann/vim-highlightedyank' " highlighted yank
@@ -146,7 +146,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " Use this theme:
-colo onedark
+colorscheme one
+set background=dark " for the dark version
+" set background=light " for the light version
 
 " Don't show keystrokes in the status bar
 set noshowcmd
