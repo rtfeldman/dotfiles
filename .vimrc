@@ -118,24 +118,28 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim' " vim plugin for fzf
   Plug 'vim-airline/vim-airline' " status line replacement
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'skywind3000/vim-auto-popmenu' " lightweight autocompletion
-  Plug 'skywind3000/vim-dict' " autocompletion dictionary for several languages
+  Plug 'prabirshrestha/asyncomplete.vim' " autocomplete
+  Plug 'prabirshrestha/asyncomplete-buffer.vim' " autocomplete using contents of current buffer
   Plug 'ElmCast/elm-vim' " elm-format on autosave
   Plug 'sheerun/vim-polyglot' " syntax highlighting for lots of things
   Plug 'danro/rename.vim' " adds :Rename command
 call plug#end()
 
-" enable vim-auto-popmenu plugin for filetypes, '*' for all files.
-let g:apc_enable_ft = {'*':1}
+" # Register asyncomplete-buffer as a source for asyncomplete
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'whitelist': ['*'],
+    \ 'blacklist': ['go'],
+    \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ 'config': {
+    \    'max_buffer_size': 5000000,
+    \  },
+    \ }))
 
-" source for dictionary, current or other loaded buffers, see ':help cpt'
-set cpt=.,k,w,b
-
-" don't select the first item.
-set completeopt=menu,menuone,noselect
-
-" suppress annoying messages.
-set shortmess+=c
+" # Tab completion for asyncomplete
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " Use this theme:
 colo onedark
