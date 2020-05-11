@@ -20,12 +20,16 @@ set shiftwidth=2
 
 set splitright
 set tabstop=2
-set termguicolors
 set ttyfast " removed in nvim
 set undodir=~/tmp/vim/undo
 set undofile
 set wildignorecase
 set noruler " Don't show the line or character count in the cmdline.
+
+" Taken from https://github.com/rakr/vim-one (Credit: joshdick)
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
