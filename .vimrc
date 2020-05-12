@@ -47,7 +47,7 @@ let g:polyglot_disabled = ['haskell', 'elm']
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_delete_buffers = 1
 let g:airline#extensions#ale#enabled = 1
-let g:airline_theme='one'
+let g:airline_theme='atomic'
 
 if !isdirectory(expand(&undodir))
    call mkdir(expand(&undodir), 'p')
@@ -108,7 +108,7 @@ augroup END
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-  Plug 'rakr/vim-one' " theme (includes both One Dark and One Light)
+  Plug 'arcticicestudio/nord-vim' " theme
   Plug 'dense-analysis/ale' " Asynchronous linter
   Plug 'haya14busa/incsearch.vim' " Improved incremental searching
   Plug 'machakann/vim-highlightedyank' " highlighted yank
@@ -146,9 +146,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " Use this theme:
-colorscheme one
-set background=dark " for the dark version
-" set background=light " for the light version
+colorscheme nord
 
 " Don't show keystrokes in the status bar
 set noshowcmd
