@@ -108,7 +108,7 @@ augroup END
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-  Plug 'arcticicestudio/nord-vim' " theme
+  Plug 'rakr/vim-one' " theme (includes both One Dark and One Light)
   Plug 'dense-analysis/ale' " Asynchronous linter
   Plug 'haya14busa/incsearch.vim' " Improved incremental searching
   Plug 'machakann/vim-highlightedyank' " highlighted yank
@@ -146,7 +146,10 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " Use this theme:
-colorscheme nord
+colorscheme one
+set background=dark " for the dark version
+" set background=light " for the light version
+
 
 " Don't show keystrokes in the status bar
 set noshowcmd
