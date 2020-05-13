@@ -6,3 +6,4 @@ atom/blob-store
 atom/.apm
 .config/nvim/.netrwhist
 .config/kitty/kitty-local.conf
+.config/kitty/theme.conf
