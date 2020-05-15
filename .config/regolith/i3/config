@@ -44,7 +44,8 @@ set_from_resource $rofiTheme rofi.theme "regolith-theme"
 
 # rofi app and window launchers
 ## Launch // Application // <Super> Space ##
-bindsym $mod+d exec rofi -show drun -theme $rofiTheme
+bindsym $mod+space exec rofi -show drun -theme $rofiTheme
+bindsym $mod+d exec rofi -show drun -theme $rofiTheme # alternately, Super+D
 ## Launch // Command // <Super><Shift> Space ##
 bindsym $mod+Shift+space exec rofi -show run -theme $rofiTheme
 ## Navigate // Window by Name // <Super><Ctrl> Space ##
