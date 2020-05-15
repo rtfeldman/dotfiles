@@ -31,6 +31,9 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+" remap <leader> to ,
+let mapleader = ","
+
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:ale_fix_on_save = 1
@@ -53,13 +56,13 @@ if !isdirectory(expand(&undodir))
    call mkdir(expand(&undodir), 'p')
 endif
 
-" Show errors on \E
+" Show errors on <leader>e
 nnoremap <leader>e :ALEDetail<cr>
 
-" Save on \S
+" Save on <leader>s
 nnoremap <leader>s :w<cr>
 
-" Quit on \Q
+" Quit on <leader>q
 nnoremap <leader>q :q<cr>
 
 " Ctrl+S saves from either insert mode or normal mode.
