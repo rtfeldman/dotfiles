@@ -21,6 +21,8 @@ export EDITOR='vim'
 alias npmtest='npm test --ignore-scripts=false'
 alias npmrun='npm run --ignore-scripts=false'
 alias cls='tput reset' # https://askubuntu.com/a/25079
+alias ctrlc='xclip -selection c'
+alias ctrlv='xclip -selection c -o'
 
 if [ -x "$(command -v direnv)" ]; then
   eval "$(direnv hook zsh)"
