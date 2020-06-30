@@ -4,7 +4,6 @@ syntax on
 
 :scriptencoding utf-8
 let &showbreak = '↪ '
-set clipboard^=unnamed,unnamedplus
 set completefunc=emoji#complete
 set completeopt+=longest
 set completeopt-=preview
@@ -29,6 +28,10 @@ set noruler " Don't show the line or character count in the cmdline.
 " Taken from https://github.com/rakr/vim-one (Credit: joshdick)
 if (has("termguicolors"))
   set termguicolors
+endif
+
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
 endif
 
 " remap <leader> to ,
