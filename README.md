@@ -5,7 +5,7 @@ Configuration files I use.
 
 ## Fresh OS Setup
 
-1. Install `ripgrep`, `fzf`, `vim`, `kitty`, `zsh`, and `oh-my-zsh`
+1. Install `ripgrep`, `fzf`, `vim-gtk`, `kitty`, `zsh`, and `oh-my-zsh`
 2. Install vim-plug
 3. `mkdir -p ~/.vim/files/info/`
 4. `git clone git@github.com:rtfeldman/dotfiles.git`
