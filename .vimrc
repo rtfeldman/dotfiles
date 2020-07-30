@@ -30,9 +30,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
-endif
+set clipboard=unnamed,unnamedplus
 
 " remap <leader> to ,
 let mapleader = ","
