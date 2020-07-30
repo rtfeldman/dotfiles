@@ -5,6 +5,10 @@ Configuration files I use.
 
 ## Fresh OS Setup
 
+First, install these:
+* `ripgrep`
+* [`fd`](https://github.com/sharkdp/fd#installation)
+
 1. Install `ripgrep`, `fzf`, `vim-gtk`, `kitty`, `zsh`, and `oh-my-zsh`
 2. Install vim-plug
 3. `mkdir -p ~/.vim/files/info/`
