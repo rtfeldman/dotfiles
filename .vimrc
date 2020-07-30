@@ -32,6 +32,23 @@ endif
 
 set clipboard=unnamed,unnamedplus
 
+if has("gui_running")
+  set guifont=JetBrains\ Mono\ 14
+
+  " Hide the menu
+  set guioptions -=m
+
+  " Hide the toolbar
+  set guioptions -=T
+
+  " Hide the scrollbar
+  set guioptions -=r
+
+  " Hide the cursor
+  set guicursor+=n-v-c:blinkon0
+endif
+
+
 " remap <leader> to ,
 let mapleader = ","
 
