@@ -16,6 +16,9 @@ source $ZSH/oh-my-zsh.sh
 # Rust crates
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# pip3 binaries
+export PATH="$HOME/.local/bin:$PATH"
+
 export EDITOR='vim'
 
 alias npmtest='npm test --ignore-scripts=false'
