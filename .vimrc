@@ -124,6 +124,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround' " Commands to work with surroundings
   Plug 'junegunn/fzf' " fuzzy finder for files/buffers/etc
   Plug 'junegunn/fzf.vim' " vim plugin for fzf
+  Plug 'stefandtw/quickfix-reflector.vim' "  Make quickfix window editable
   Plug 'vim-airline/vim-airline' " status line replacement
   Plug 'vim-airline/vim-airline-themes'
   Plug 'prabirshrestha/asyncomplete.vim' " autocomplete
