@@ -155,8 +155,8 @@ inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " Use this theme:
 colorscheme one
-set background=dark " for the dark version
-" set background=light " for the light version
+" set background=dark " for the dark version
+set background=light " for the light version
 
 
 " Don't show keystrokes in the status bar
