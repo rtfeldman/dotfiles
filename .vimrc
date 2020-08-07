@@ -70,6 +70,9 @@ nnoremap <leader>q :q<cr>
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 
+" Pasting over a selection shouldn't alter the clipboard - via https://stackoverflow.com/a/7797434
+xnoremap p pgvy
+
 " Perform fuzzy file searching
 nnoremap <C-P> mN:Files<cr>
 nnoremap <C-B> mN:Buffers<CR>
