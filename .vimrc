@@ -35,7 +35,7 @@ set clipboard=unnamed,unnamedplus
 " remap <leader> to ,
 let mapleader = ","
 
-" # Plugin configuration
+" Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:ale_fix_on_save = 1
 let g:ale_elm_make_use_global=1
@@ -94,7 +94,6 @@ map /  <plug>(incsearch-forward)
 map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
 
-" :h g:incsearch#auto_nohlsearch
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
 map n  <Plug>(incsearch-nohl-n)
@@ -104,7 +103,7 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-" # Autocmds
+" Autocmds
 augroup customCommands
   autocmd FileType elm set tabstop=4
   autocmd FileType elm set shiftwidth=4
@@ -137,7 +136,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'danro/rename.vim' " adds :Rename command
 call plug#end()
 
-" # Register asyncomplete-buffer as a source for asyncomplete
+" Register asyncomplete-buffer as a source for asyncomplete
 call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
     \ 'name': 'buffer',
     \ 'whitelist': ['*'],
@@ -148,7 +147,7 @@ call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options
     \  },
     \ }))
 
-" # Tab completion for asyncomplete
+" Tab completion for asyncomplete
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
@@ -188,7 +187,7 @@ let g:ale_lint_on_text_changed = 'never'
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-" # Commands
+" Commands
 command! ReloadConfig execute "source ~/.vimrc"
 
 " Rg search via FZF - taken from https://github.com/junegunn/fzf.vim/blob/25bed070d83c6a230da371336829092a715edd07/README.md
@@ -198,7 +197,6 @@ command! -bang -nargs=* Rg
   \   { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' },
   \   <bang>0)
 
-" In ~/.vim/vimrc, or somewhere similar.
 let g:ale_linters = {
 \   'elm': ['make'],
 \   'haskell': ['hlint', 'hdevtools']
