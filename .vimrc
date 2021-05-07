@@ -82,13 +82,6 @@ nnoremap <leader>/ mN:History/<cr>
 nnoremap <leader>: mN:History:<cr>
 nnoremap <leader>? mN:Helptags<cr>
 
-
-" Terminal mappings
-nnoremap <silent> <C-T> :<c-u>exec v:count.'Ttoggle'<cr>
-tnoremap <silent> <C-T> <C-\><C-n>:<c-u>exec v:count.'Ttoggle'<cr>
-tnoremap <C-[> <C-\><C-n>
-tnoremap <C-O> <C-\><C-n>`N
-
 " Hightlight all incremental search results
 map /  <plug>(incsearch-forward)
 map ?  <plug>(incsearch-backward)
