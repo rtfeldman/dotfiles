@@ -135,6 +135,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ElmCast/elm-vim' " elm-format on autosave
   Plug 'sheerun/vim-polyglot' " syntax highlighting for lots of things
   Plug 'danro/rename.vim' " adds :Rename command
+  Plug 'phanviet/vim-monokai-pro'
 call plug#end()
 
 " # Register asyncomplete-buffer as a source for asyncomplete
@@ -154,9 +155,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " Use this theme:
-colorscheme one
-" set background=dark " for the dark version
-set background=light " for the light version
+colorscheme monokai_pro
+set background=dark " for the dark version
+" set background=light " for the light version
 
 
 " Don't show keystrokes in the status bar
@@ -165,6 +166,8 @@ set noshowcmd
 " show colorcolumn at 81+ characters
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermfg=0 ctermbg=8 cterm=none
+
+hi Visual  guifg=#000000 guibg=#FFFFFF gui=none
 
 " don't show colorcolumn in quickfix
 autocmd FileType qf let &colorcolumn=""
