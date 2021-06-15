@@ -127,6 +127,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ElmCast/elm-vim' " elm-format on autosave
   Plug 'sheerun/vim-polyglot' " syntax highlighting for lots of things
   Plug 'danro/rename.vim' " adds :Rename command
+  Plug 'arp242/auto_mkdir2.vim' " automatically create directories as needed when writing
 call plug#end()
 
 " Register asyncomplete-buffer as a source for asyncomplete
