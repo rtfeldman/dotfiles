@@ -196,3 +196,5 @@
 	rebase = true
 [init]
 	defaultBranch = trunk
+[branch]
+	autosetupmerge = true
