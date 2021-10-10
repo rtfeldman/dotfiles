@@ -2,6 +2,10 @@
 filetype plugin indent on
 syntax on
 
+" Fix for backrgound rendering bug; see
+" https://github.com/microsoft/terminal/issues/832#issuecomment-493747616
+set t_ut=""
+
 :scriptencoding utf-8
 let &showbreak = '↪ '
 set completefunc=emoji#complete
