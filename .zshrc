@@ -1,3 +1,8 @@
+# NOTE: I'm trying to stop using oh-my-zsh and instead set up terminal colors,
+# git aliases, and fzf (and maybe vim keybindings) via Nix and .zshrc instead.
+
+####### begin oh-my-zsh #######
+
 # oh-my-zsh config (runs before everything else)
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -9,9 +14,30 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vi-mode fzf)
 
-source $ZSH/oh-my-zsh.sh
+[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
-# User configuration
+####### end oh-my-zsh #######
+
+# Initialize zsh's built-in autocomplete (which ships with git autocomplete)
+# https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Initialization
+autoload -Uz compinit && compinit
+
+# ll
+alias ll='ls -lahF --color=auto'
+
+# Git aliases
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
+
+alias -g g="git"
+alias -g gd="git diff"
+alias -g ga="git add"
+alias -g gb="git branch"
+alias -g gc="git commit -v"
+alias -g gc!="git commit -v --amend"
+alias -g gco="git checkout"
+alias -g gcp="git cherry-pick"
+alias -g gfa="git fetch --all"
+alias -g gst="git status"
 
 # Rust crates
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -44,3 +70,5 @@ stty -ixon
 
 # Install FZF completions, if available
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export NIX_PATH=darwin-config=$HOME/.nixpkgs/darwin-configuration.nix:$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
