@@ -3,6 +3,12 @@ dotfiles
 
 Configuration files I use.
 
+## Generate a new GPG key
+
+```
+$ gpg --generate-key --default-key AES256
+```
+
 ## Fresh OS Setup
 
 First, install these:
