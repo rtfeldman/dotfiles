@@ -198,3 +198,5 @@
 	defaultBranch = trunk
 [branch]
 	autosetupmerge = true
+[commit]
+	gpgsign = true

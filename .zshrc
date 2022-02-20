@@ -18,6 +18,9 @@ plugins=(git vi-mode fzf)
 
 ####### end oh-my-zsh #######
 
+# Tell gpg how to prompt for password: https://github.com/keybase/keybase-issues/issues/2798
+export GPG_TTY=$(tty)
+
 # Initialize zsh's built-in autocomplete (which ships with git autocomplete)
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Initialization
 autoload -Uz compinit && compinit
