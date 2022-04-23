@@ -38,9 +38,12 @@ alias -g gb="git branch"
 alias -g gc="git commit -v"
 alias -g gc!="git commit -v --amend"
 alias -g gco="git checkout"
+alias -g gca="git commit --amend"
 alias -g gcp="git cherry-pick"
 alias -g gfa="git fetch --all"
 alias -g gst="git status"
+alias -g grh="git reset --hard"
+alias -g gpf="git push --force-with-lease"
 
 # Rust crates
 export PATH="$HOME/.cargo/bin:$PATH"
