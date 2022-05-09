@@ -77,8 +77,8 @@ stty -ixon
 
 # Install FZF completions, if available
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export NIX_PATH=darwin-config=$HOME/.nixpkgs/darwin-configuration.nix:$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
-source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+#export NIX_PATH=darwin-config=$HOME/.nixpkgs/darwin-configuration.nix:$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+#source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 
 # Add colors to Terminal
 export CLICOLOR=1
