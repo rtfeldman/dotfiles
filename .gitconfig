@@ -194,6 +194,7 @@
 	enabled = true
 [pull]
 	rebase = true
+	default = current
 [init]
 	defaultBranch = trunk
 [branch]
