@@ -44,6 +44,7 @@ alias -g gfa="git fetch --all"
 alias -g gst="git status"
 alias -g grh="git reset --hard"
 alias -g gpf="git push --force-with-lease"
+alias -g gp="git push"
 
 # Rust crates
 export PATH="$HOME/.cargo/bin:$PATH"
