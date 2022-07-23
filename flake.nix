@@ -30,6 +30,7 @@
                 ]);
                 vscodeWithExtensions = pkgs.vscode-with-extensions.override {
                   vscodeExtensions = with pkgs.vscode-extensions; [
+                    vscodevim.vim
                     matklad.rust-analyzer
                     eamodio.gitlens
                     bbenoist.nix
