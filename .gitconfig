@@ -6,8 +6,6 @@
 	excludesfile = ~/.gitignore
 [web]
 	browser = firefox
-[push]
-	default = current
 [color]
 	ui = auto
 [color "branch"]
@@ -26,6 +24,7 @@
 	untracked = red bold
 [diff]
 	tool = vimdiff
+	colorMoved = zebra
 [difftool]
 	prompt = false
 [alias]
@@ -194,10 +193,15 @@
 	enabled = true
 [pull]
 	rebase = true
-	default = current
+  default = current
 [init]
-	defaultBranch = trunk
-[branch]
-	autosetupmerge = true
+	defaultBranch = main
 [commit]
 	gpgsign = true
+[checkout]
+  defaultRemote = origin
+[push]
+	default = current
+	autoSetupRemote = true
+[branch]
+	autosetuprebase = always

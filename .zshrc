@@ -44,13 +44,16 @@ alias -g gfa="git fetch --all"
 alias -g gst="git status"
 alias -g grh="git reset --hard"
 alias -g gpf="git push --force-with-lease"
-alias -g gp="git push"
+alias -g gp="git push -u origin HEAD"
 
 # Rust crates
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # pip3 binaries
 export PATH="$HOME/.local/bin:$PATH"
+
+# npm
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 # LLVM
 export LLVM_SYS_100_PREFIX="$HOME/llvm"
