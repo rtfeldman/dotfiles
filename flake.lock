@@ -2,11 +2,11 @@
   "nodes": {
     "flake-utils": {
       "locked": {
-        "lastModified": 1656928814,
-        "narHash": "sha256-RIFfgBuKz6Hp89yRr7+NR5tzIAbn52h8vT6vXkYjZoM=",
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "7e2a3b3dfd9af950a856d66b0a7d01e3c18aa249",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
         "type": "github"
       },
       "original": {
@@ -83,16 +83,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1647282937,
-        "narHash": "sha256-K8Oo6QyFCfiEWTRpQVfzcwI3YNMKlz6Tu8rr+o3rzRQ=",
+        "lastModified": 1657972522,
+        "narHash": "sha256-JTiKsBT1BwMbtSUsvtSl8ffkiirby8FaujJVGV766Q8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "64fc73bd74f04d3e10cb4e70e1c65b92337e76db",
+        "rev": "07a2e6a4e31ea48408861607198972d60adaf4ad",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-21.11",
+        "ref": "nixos-22.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -106,7 +106,8 @@
         "zig": "zig"
       },
       "locked": {
-        "narHash": "sha256-0XCyz1VZkpg9k1ztS2LNY+AcH8wk0VY1ca9cgc+z0DY=",
+        "lastModified": 1660145934,
+        "narHash": "sha256-yIgYWybvSeURENQ6skLrOcZooJqRMd4bYCyRY/cZ/30=",
         "path": "/Users/rtfeldman/code/roc",
         "type": "path"
       },
