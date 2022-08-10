@@ -1,8 +1,6 @@
 {
     "window.title": "${activeEditorMedium}",
     "window.menuBarVisibility": "toggle",
-
-    "workbench.colorTheme": "Night Owl (No Italics)",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
@@ -17,7 +15,6 @@
     "editor.fontFamily": "'Inconsolata'",
     "editor.minimap.enabled": false,
     "editor.cursorBlinking": "solid",
-    "editor.renderIndentGuides": false,
 
     "[elm]": {
         "elm.disableLinting": true,
@@ -41,7 +38,7 @@
             "commands": ["redo"]
         }
     ],
-    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.color": "rgba(96, 120, 128, 0.5)",
     "vim.highlightedyank.duration": 100,
@@ -66,7 +63,9 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.feedback.visible": false,
     "files.associations": {
-        "*.roc": "coffeescript"
+        "*.roc": "elixir"
     },
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
+    "editor.guides.indentation": false,
+    "workbench.colorTheme": "Atom One Dark"
 }
