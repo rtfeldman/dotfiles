@@ -1,7 +1,5 @@
 {
     "window.title": "${activeEditorMedium}",
-    "window.menuBarVisibility": "toggle",
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -12,13 +10,11 @@
         "statusBar.debuggingBackground": "#511f1f"
     },
     "editor.fontSize": 14,
-    "editor.fontFamily": "'Inconsolata'",
+    "editor.fontFamily": "'JetBrains MonoNL'",
     "editor.minimap.enabled": false,
     "editor.cursorBlinking": "solid",
 
     "[elm]": {
-        "elm.disableLinting": true,
-        "elm.makeCommand": "./node_modules/.bin/elm-make",
         "editor.formatOnSave": true
     },
 
@@ -55,23 +51,17 @@
         "**/bower_components": true
     },
 
-    "rust-client.channel": "stable",
-    "rust-analyzer.enableCargoWatchOnStartup": "enabled",
-
-    "newFile.defaultFileExtension": ".elm",
-    "newFile.showPathRelativeTo": "project",
     "window.zoomLevel": 2,
     "terminal.integrated.fontSize": 16,
     "terminal.external.linuxExec": "zsh",
     "terminal.integrated.fontFamily": "'Source Code Pro'",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.feedback.visible": false,
     "files.associations": {
         "*.roc": "elixir"
     },
     "editor.guides.indentation": false,
     "editor.codeLens": false,
     "workbench.colorTheme": "Atom One Dark",
-    "editor.inlayHints.enabled": false,
-    "editor.lightbulb.enabled": false
+    "editor.lightbulb.enabled": false,
+    "editor.inlayHints.enabled": false
 }
