@@ -1,23 +1,6 @@
 # NOTE: I'm trying to stop using oh-my-zsh and instead set up terminal colors,
 # git aliases, and fzf (and maybe vim keybindings) via Nix and .zshrc instead.
 
-####### begin oh-my-zsh #######
-
-# oh-my-zsh config (runs before everything else)
-
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode fzf)
-
-[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-
-####### end oh-my-zsh #######
-
 # Tell gpg how to prompt for password: https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
 
@@ -80,10 +63,34 @@ stty -ixon
 
 # Install FZF completions, if available
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#export NIX_PATH=darwin-config=$HOME/.nixpkgs/darwin-configuration.nix:$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
-#source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 
 # Add colors to Terminal
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# Ruby
 export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
+
+# Roc compiler
+export PATH="$HOME/code/roc/target/release:$PATH"
+
+# Enable vi mode in zsh
+bindkey -v
+
+# Find and set branch name var if in git repository.
+function git_branch_name()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo ''%F{yellow}$branch%f''
+  fi
+}
+
+# Enable substitution in the prompt.
+setopt prompt_subst
+
+# Set the prompt
+export PROMPT='%F{cyan}%0~%f $(git_branch_name)$ '
