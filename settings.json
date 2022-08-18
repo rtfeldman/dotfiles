@@ -52,16 +52,15 @@
     },
 
     "window.zoomLevel": 2,
-    "terminal.integrated.fontSize": 16,
-    "terminal.external.linuxExec": "zsh",
-    "terminal.integrated.fontFamily": "'Source Code Pro'",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "monospace",
     "workbench.startupEditor": "newUntitledFile",
     "files.associations": {
-        "*.roc": "elixir"
+        "*.roc": "coffeescript"
     },
     "editor.guides.indentation": false,
     "editor.codeLens": false,
     "workbench.colorTheme": "Atom One Dark",
     "editor.lightbulb.enabled": false,
-    "editor.inlayHints.enabled": false
+    "editor.inlayHints.enabled": "off"
 }

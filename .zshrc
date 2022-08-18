@@ -1,6 +1,3 @@
-# NOTE: I'm trying to stop using oh-my-zsh and instead set up terminal colors,
-# git aliases, and fzf (and maybe vim keybindings) via Nix and .zshrc instead.
-
 # Tell gpg how to prompt for password: https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
 
