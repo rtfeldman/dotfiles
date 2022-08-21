@@ -106,8 +106,8 @@
         "zig": "zig"
       },
       "locked": {
-        "lastModified": 1660145934,
-        "narHash": "sha256-yIgYWybvSeURENQ6skLrOcZooJqRMd4bYCyRY/cZ/30=",
+        "lastModified": 1660850710,
+        "narHash": "sha256-NCF0o6LWyKV5O5rWZ31emJw3cc4kvel0vCHPBGrIlB4=",
         "path": "/Users/rtfeldman/code/roc",
         "type": "path"
       },
