@@ -10,7 +10,7 @@
         "statusBar.debuggingBackground": "#511f1f"
     },
     "editor.fontSize": 14,
-    "editor.fontFamily": "'JetBrains MonoNL'",
+    "editor.fontFamily": "JetBrains Mono NL",
     "editor.minimap.enabled": false,
     "editor.cursorBlinking": "solid",
 
