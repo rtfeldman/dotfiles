@@ -42,6 +42,12 @@
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.color": "rgba(96, 120, 128, 0.5)",
     "vim.highlightedyank.duration": 100,
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before":["p"],
+            "after":["p","g","v","y"]
+        }
+    ],
 
     "files.trimTrailingWhitespace": true,
 
