@@ -61,9 +61,6 @@
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontFamily": "monospace",
     "workbench.startupEditor": "newUntitledFile",
-    "files.associations": {
-        "*.roc": "coffeescript"
-    },
     "editor.guides.indentation": false,
     "editor.codeLens": false,
     "workbench.colorTheme": "Atom One Dark",
