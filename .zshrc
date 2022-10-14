@@ -1,3 +1,10 @@
+# Nix (this normally goes in /etc/zshrc but macOS overrides that on some system updates -
+# see https://gist.github.com/meeech/0b97a86f235d10bc4e2a1116eec38e7e#nix-setup-will-modify-your-etczshrc-when-os-x-updates-it-will-sometimes-restore-the-original-etczshrc
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
+# End Nix
 # Tell gpg how to prompt for password: https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
 
