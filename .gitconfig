@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+	pager = delta
 [web]
 	browser = firefox
 [color]
@@ -23,8 +24,8 @@
 	changed = yellow bold
 	untracked = red bold
 [diff]
-	tool = vimdiff
-	colorMoved = zebra
+    colorMoved = default
+
 [difftool]
 	prompt = false
 [alias]
@@ -205,3 +206,14 @@
 	autoSetupRemote = true
 [branch]
 	autosetuprebase = always
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
