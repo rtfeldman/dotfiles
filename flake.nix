@@ -26,7 +26,7 @@
               let
                 devInputs = (with pkgs; [
                   less
-                  gdb
+                  # gdb
                 ]);
                 vscodeWithExtensions = pkgs.vscode-with-extensions.override {
                   vscodeExtensions = with pkgs.vscode-extensions; [
