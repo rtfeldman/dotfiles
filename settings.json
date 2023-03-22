@@ -56,14 +56,33 @@
         "**/elm-stuff": true,
         "**/bower_components": true
     },
-
-    "window.zoomLevel": 2,
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontFamily": "monospace",
     "workbench.startupEditor": "newUntitledFile",
     "editor.guides.indentation": false,
-    "editor.codeLens": false,
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Atom One Light",
     "editor.lightbulb.enabled": false,
-    "editor.inlayHints.enabled": "off"
+    "editor.inlayHints.enabled": "off",
+    "explorer.confirmDelete": false,
+    "editor.codeLens": false,
+    "files.associations": {
+        "AUTHORS": "plaintext"
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": 2,
+    "editor.inlineSuggest.enabled": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    }
 }
