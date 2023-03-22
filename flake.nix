@@ -34,7 +34,6 @@
                     matklad.rust-analyzer
                     eamodio.gitlens
                     bbenoist.nix
-                    vadimcn.vscode-lldb
                   ];
                 };
               in
