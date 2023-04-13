@@ -14,7 +14,7 @@ $ gpg --generate-key --default-key AES256
 First, install these:
 * `ripgrep`
 * [`fd`](https://github.com/sharkdp/fd#installation)
-* [git-delta](https://github.com/dandavison/delta
+* [git-delta](https://github.com/dandavison/delta)
 
 1. Install `ripgrep`, `fzf`, `vim-gtk`, `kitty`, `zsh`, and `oh-my-zsh`
 2. Install vim-plug
